@@ -20,13 +20,13 @@ EUCA can be used by **anyone who designs or builds** an explainable AI system **
 
 ![The five main components of EUCA framework](fig/euca_compo.jpg)
 
-The main component of EUCA is the **12 end-user-friendly explanatory forms**, 
+The main component of EUCA is the **12 end-user-friendly explanatory forms**, and
 - their associated design examples/templates
 - corresponding algorithms for implementation, and 
 - identified properties (their strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study findings 
 See **[explanatory forms page](explanatory_form.md)** for the above details and design examples.
 
-In addition, EUCA also provides a [suggested prototyping method](#prototyping), and end-users' diverse **[explanation need analysis](need.md)** (such as to calibrate trust, detect bias, resolve disagreement with AI).
+In addition, EUCA also provides a [suggested prototyping method](#prototyping), and end-users' diverse **[explanation need analysis](need.md)** (such as to [calibrate trust](need.md/#trust), [detect bias](need.md/#bias), [resolve disagreement with AI](need.md/#unexpected)).
 
 The 12 explanatory forms in EUCA framework are:
 ## Feature-based explanation
@@ -100,11 +100,11 @@ We have the following versions:
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
 
-# How to cite the EUCE framework?
+# How to cite the EUCA framework?
 [Research paper]()
 
 
-# Can I share my design?
+# I used EUCA to design a prototype, can I share my XAI design?
 
 You can inspire other designers by sharing your sketches, designs and prototypes using EUCA. We will post your design on the EUCA page.
 

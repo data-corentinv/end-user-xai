@@ -1,4 +1,4 @@
-# EUCA: The <ins>E<ins>nd-<ins>U<ins>ser-<ins>C<ins>entered Explainable <ins>A<ins>I Framework
+# EUCA: The <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
 
 ![When and why explainable AI for end-users](fig/why_xai.jpg)
 

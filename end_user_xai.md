@@ -1,4 +1,4 @@
-# EUCA: The End-User-Centered explainable AI Framework
+# EUCA: The End-User-Centered Explainable AI Framework
 
 
 The EUCA framework is a prototyping tool to design explainable AI for non-technical end-users.

@@ -20,13 +20,17 @@ EUCA can be used by **anyone who designs or builds** an explainable AI system **
 
 ![The five main components of EUCA framework](fig/euca_compo.jpg)
 
-The main component of EUCA is the **12 end-user-friendly explanatory forms**, their associated design examples/templates, corresponding algorithms for implementation, and identified properties (strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study. In addition, EUCA also provides a [suggested prototyping method](#prototyping)
+The main component of EUCA is the **12 end-user-friendly explanatory forms**, 
+- their associated design examples/templates
+- corresponding algorithms for implementation, and 
+- identified properties (their strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study findings 
+See [explanatory forms page](explanatory_form.md) for the above details and design examples.
 
-of explanations that are end-user-friendly, meaning users are not required to have the technical knowledge to understand these explanations. This is suitable if your XAI system is designed for non-technical end-users.
+In addition, EUCA also provides a [suggested prototyping method](#prototyping), and end-users' diverse [explanation need analysis](need.md) (such as to calibrate trust, detect bias, resolve disagreement with AI).
 
-The 12 explanatory forms in EUCE framework are:
+The 12 explanatory forms in EUCA framework are:
 ## Feature-based explanation
-1. [Feature attribute](#fa)
+1. [Feature attribute](explanatory_form.md/#fa)
 2. Feature shape
 3. Feature interaction
 
@@ -45,7 +49,8 @@ The 12 explanatory forms in EUCE framework are:
 11. Performance
 12. Dataset
 
-See [below](#euce) for their details and examples.
+![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.jpg)
+
 
 
 # <a name="prototyping"></a> How to use EUCA for XAI prototyping?
@@ -95,31 +100,9 @@ We have the following versions:
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
 
-
-
-
-## EUCE: End-User-Centered Explainable AI Framework
-
-### Feature-based explanation
-1. {#fa} Feature attribute
-2. Feature shape
-3. Feature interaction
-### Example-based explanation
-4. Similar example
-5. Typical example
-6. Counterfactual example
-### Rule-based explanation
-7. Rule text
-8. Decision tree
-### Supplementary information
-9. Input
-10. Output
-11. Performance
-12. Dataset
-
-
 # How to cite the EUCE framework?
 [Research paper]()
+
 
 # Can I share my design?
 
@@ -127,13 +110,4 @@ You can inspire other designers by sharing your sketches, designs and prototypes
 
 To share your design, please feel free to contact weinaj at sfu dot ca, or open a pull request on the [EUCA project repo](https://github.com/weinajin/end-user-xai).
 
-
-# Open-sourced XAI software packages
-[Alibi](https://docs.seldon.io/projects/alibi/en/v0.2.0/overview/getting_started.html)
-
-[Software list1](https://github.com/lopusz/awesome-interpretable-machine-learning#software)
-
-[Softwareblist 2](https://github.com/jphall663/awesome-machine-learning-interpretability#explainability--or-fairness-enhancing-software-packages)
-
-[Captum, a pytorch XAI library](https://captum.ai/) 
 

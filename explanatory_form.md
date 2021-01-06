@@ -2,6 +2,10 @@
 
 ## Feature-based explanation
 ### <a name="fa"></a> [Feature attribute](#fa)
+
+![Feature_attribute](prototyping/Feature_attribute.png)
+
+
 ### <a name="fs"></a> Feature shape
 ### Feature interaction
 

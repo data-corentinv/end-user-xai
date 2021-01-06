@@ -24,13 +24,13 @@ The main component of EUCA is the **12 end-user-friendly explanatory forms**,
 - their associated design examples/templates
 - corresponding algorithms for implementation, and 
 - identified properties (their strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study findings 
-See [explanatory forms page](explanatory_form.md) for the above details and design examples.
+See **[explanatory forms page](/explanatory_form)** for the above details and design examples.
 
-In addition, EUCA also provides a [suggested prototyping method](#prototyping), and end-users' diverse [explanation need analysis](need.md) (such as to calibrate trust, detect bias, resolve disagreement with AI).
+In addition, EUCA also provides a [suggested prototyping method](#prototyping), and end-users' diverse **[explanation need analysis](need.md)** (such as to calibrate trust, detect bias, resolve disagreement with AI).
 
 The 12 explanatory forms in EUCA framework are:
 ## Feature-based explanation
-1. [Feature attribute](explanatory_form.md/#fa)
+1. [Feature attribute](/explanatory_form/#fa)  
 2. Feature shape
 3. Feature interaction
 

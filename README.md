@@ -20,26 +20,26 @@ EUCA can be used by **anyone who designs or builds** an explainable AI system **
 
 ![The five main components of EUCA framework](fig/euca_compo.jpg)
 
-The main component of EUCA is the **12 end-user-friendly explanatory forms**, their associated design examples/templates, corresponding algorithms for implementation, and identified properties (strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study. In addition, EUCA also provides 
+The main component of EUCA is the **12 end-user-friendly explanatory forms**, their associated design examples/templates, corresponding algorithms for implementation, and identified properties (strength, weakness, UI/UX design implications, and applicable explanation needs) from our user study. In addition, EUCA also provides a [suggested prototyping method](#prototyping)
 
 of explanations that are end-user-friendly, meaning users are not required to have the technical knowledge to understand these explanations. This is suitable if your XAI system is designed for non-technical end-users.
 
-The 12 explanation types in EUCE framework are:
-### Feature-based explanation
+The 12 explanatory forms in EUCE framework are:
+## Feature-based explanation
 1. [Feature attribute](#fa)
 2. Feature shape
 3. Feature interaction
 
-### Example-based explanation
+## Example-based explanation
 4. Similar example
 5. Typical example
 6. Counterfactual example
 
-### Rule-based explanation
+## Rule-based explanation
 7. Rule text
 8. Decision tree
 
-### Supplementary information
+## Supplementary information
 9. Input
 10. Output
 11. Performance
@@ -48,7 +48,7 @@ The 12 explanation types in EUCE framework are:
 See [below](#euce) for their details and examples.
 
 
-# How to use EUCA for XAI prototyping?
+# <a name="prototyping"></a> How to use EUCA for XAI prototyping?
 
 ![The five main components of EUCA framework](fig/euca_workflow.jpg)
 

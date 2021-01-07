@@ -7,17 +7,17 @@ navigation:
   - title: EUCA Homepage
     url: /
   - title: End-User-Friendly Explanatory Forms
-    url: "explanatory_form.html"
+    url: /explanatory_form.html
     subfolderitems:
       - Feature attribute
-        url: "explanatory_form.html/#fa"
+        url: /explanatory_form.html#fa
 
 
   - title: Explanation Needs
-    url: "need.md"
+    url: /need
 
 
-avatar: "fig/euca_logo.png"
+avatar: /fig/euca_logo.png
 
 social-network-links:
   email: "weinaj@sfu.ca"

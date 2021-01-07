@@ -7,6 +7,7 @@ You can use the prototype at the initial phase for user need assessment, and as 
 
 # Why explainable AI?
 
+
 ![When and why explainable AI for end-users](fig/why_xai.jpg)
 
 As AI is getting pervasive and assists users in making decisions on **critical tasks**, such as autonomous driving vehicles, clinical diagnosis, financial decisions, legal and military judgment, or something crucial that relates to people's life or money, the end-users will be more likely to require AI to justify its prediction.
@@ -16,6 +17,7 @@ Making AI explainable to its end-users is challenging, since end-users are **lay
 # Who use EUCA?
 EUCA can be used by **anyone who designs or builds** an explainable AI system **for end-users**, such as UI/UX designers, AI developers, AI researchers, and HCI researchers. 
 
+---
 
 # What is the EUCA framework?
 
@@ -53,7 +55,7 @@ The 12 explanatory forms in EUCA framework are:
 ![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.jpg)
 
 
-
+---
 # <a name="prototyping"></a> How to use EUCA for XAI prototyping?
 
 ![The five main components of EUCA framework](fig/euca_workflow.jpg)
@@ -81,7 +83,7 @@ The EUCA framework can facilitate your participatory design process, i.e., to in
 We list the corresponding algorithms after each explanatory component, so that you can implement them or use the existing open-sourced implementation to deploy your XAI prototype. You can iterate your XAI system based on the implemented working prototype. 
 
 
-
+---
 
 # <a name="template"></a> Prototyping materials for download
 We provide the following prototyping materials:
@@ -100,10 +102,12 @@ We have the following versions:
 
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
+---
 
 # <a name="cite"></a> How to cite the EUCA framework?
 [Research paper]()
 
+—
 
 # <a name="share"></a> I used EUCA and I want to share my XAI design
 

@@ -13,26 +13,19 @@
     <div class="wrapper">
       <header>
         {% if site.logo %}
-        <div style="display:inline-block;vertical-align:top;">
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        </div>
+          <img src="{{site.logo | relative_url}}" style="float:left;width:50%;height:auto;" alt="Logo" />
         {% endif %}
-        <div style="display:inline-block;">
         <h1><a href="https://weina.me/end-user-xai">{{ site.title | default: site.github.repository_name }}</a></h1>
-        </div>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <table>
-          
           <tr><th><a href="https://weina.me/end-user-xai">EUCA Homepage</a></th></tr>
           <tr><th><a href="explanatory_form.html">End-User-Friendly Explanatory Forms</a></th></tr>
                   <tr><th><a href="explanatory_form.html#feature">&#8226; Feature-based explanation</a></th></tr>
                   <tr><th><a href="explanatory_form.html#example">&#8226; Example-based explanation</a></th></tr>
                   <tr><th><a href="explanatory_form.html#rule">&#8226; Rule-based explanation</a></th></tr>
                   <tr><th><a href="explanatory_form.html#suppl">&#8226; Supplementary information</a></th></tr>
-
           <tr><th><a href="need.html">Explanation Needs</a></th></tr>
-
         </table>
 
         {% if site.show_downloads %}

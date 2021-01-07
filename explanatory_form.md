@@ -27,15 +27,15 @@ We identify end-user-friendly explanatory forms from technical literature. By en
 **Comparison table**
 
 
-| **Explanatory type**              | **Local/global** | **Datatype**    | **Pros**                                                                                                  | **Cons**                                                                                 | **Applicable needs**                                                                     | **XAI algorithms**                                                                                                                                                                           |
-|-----------------------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Feature Attribute**](#fa)      | Local/Global     | Tabular/Img/Txt | Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.                       | Illusion of causality, confirmation bias                                                 | To verify AI's decision                                                                  | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)                                   |
-| [**Feature Shape**](#fs)          | Global           | Tabular         | Graphical representation, easy to understand the relationship between one feature and prediction          | Lacks feature interaction; Information overload if multiple feature shapes are presented | To control and improve the outcome; To reveal bias                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)                                                                                                                                            |
-| [**Feature Interaction**](#fi)    | Global           | Tabular         | Show feature-feature interaction                                                                          | The diagram on multiple features is difficult to interpret                               | To control and improve the outcome                                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)                                                                                                                                   |
-| [**Similar Example**](#se)        | Local            | Tabular/Img/Txt | Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples | It does not highlight features within examples to enable users’ side-by-side comparison  | To verify the decision                                                                   | [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)                                                                                                                                                      |
-| [**Typical Example**](#te)        | Local/Global     | Tabular/Img/Txt | Use prototypical instances to show learned representation; Reveal potential problems of the model         | Users may not appreciate the idea of typical cases                                       | To verify the decision; To reveal bias                                                   | [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), [CNN prototype]([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html))                                                                              |
+| **Explanatory type**              | **Local/global** | **Datatype**    | **Pros**                                                                                                  | **Cons**                                                                                 | **Applicable needs**                                                                     | **XAI algorithms**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|-----------------------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**Feature Attribute**](#fa)      | Local/Global     | Tabular/Img/Txt | Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.                       | Illusion of causality, confirmation bias                                                 | To verify AI's decision                                                                  | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)                                                                                                                                                                                                                                                                  |
+| [**Feature Shape**](#fs)          | Global           | Tabular         | Graphical representation, easy to understand the relationship between one feature and prediction          | Lacks feature interaction; Information overload if multiple feature shapes are presented | To control and improve the outcome; To reveal bias                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)                                                                                                                                                                                                                                                                                                                                                                                 |
+| [**Feature Interaction**](#fi)    | Global           | Tabular         | Show feature-feature interaction                                                                          | The diagram on multiple features is difficult to interpret                               | To control and improve the outcome                                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)                                                                                                                                                                                                                                                                                                                                                                |
+| [**Similar Example**](#se)        | Local            | Tabular/Img/Txt | Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples | It does not highlight features within examples to enable users’ side-by-side comparison  | To verify the decision                                                                   | [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)                                                                                                                                                                                                                                                                                                                                               |
+| [**Typical Example**](#te)        | Local/Global     | Tabular/Img/Txt | Use prototypical instances to show learned representation; Reveal potential problems of the model         | Users may not appreciate the idea of typical cases                                       | To verify the decision; To reveal bias                                                   | [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), [CNN prototype]([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html))                                                    |
 | [**Counterfactual Example**](#ce) | Local            | Tabular/Img/Txt | Helpful to identify the differences between the current outcome and another contrastive outcome           | Hard to understand, may cause confusion                                                  | To differentiate between similar instances; To control and improve the outcome           | [Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Influential instance](https://arxiv.org/abs/1703.04730),[Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) |
-| [**Decision Rules/Sets**](#rl)    | Global           | Tabular/Img/Txt | Present decision logic, *"like human explanation"*                                                        | Need to carefully balance between completeness and simplicity of explanation             | Facilitate users' learning, report generation, and communication with other stakeholders | [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)                                                                                                                   |
+| [**Decision Rules/Sets**](#rl)    | Global           | Tabular/Img/Txt | Present decision logic, *"like human explanation"*                                                        | Need to carefully balance between completeness and simplicity of explanation             | Facilitate users' learning, report generation, and communication with other stakeholders | [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)                                                                                                                                                                                                                                                                                                                                             |
 |[**Decision tree**](#dt) | Global | Tabular/Img/Txt |  Show decision process, explain the differences |  Too much information, complicated to understand |  Comparison; Counterfactual reasoning | [Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
 
 ---
@@ -81,6 +81,9 @@ Its visual representation largely depend on the data type of the features. For i
 
 To visualize multiple feature attributes for tabular or text data, a **bar chart** is typical choice. The variations of bar plot include waterfall plot, treemap, wrapped bars, packed bars, piled bars, Zvinca plots, and tornado plot. _Box plot_ can be used to visualize the distribution of the feature importance score. Its variations include violin plot and beeswarm plot that show more detailed data distribution and skewness.
 
+### Algorithms for implementation
+
+[LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)
 
 ### Pros
 
@@ -126,6 +129,11 @@ It shows the relationship between one particular feature and the outcome, such a
 ![Feature_shape](prototyping/Feature_shape.png)
 
 **Line plot** and _scatter plot_ are common visualizations to show the effect of an individual feature to the predicted outcome.
+
+### Algorithms for implementation
+
+[PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)
+
 
 ### **Pros**
 
@@ -178,6 +186,10 @@ When features interact with each other, their total effect on the outcome may no
 
 **2D or 3D heatmap** is used to visualize the effect of feature interactions on the predictions. Limited by the visualization, the heatmap can only show interaction for at most three features (using 3D heatmap). More complicated multiple paired feature-feature interactions can be visualized using matrix heatmap, node-link network, or contingency wheel.
 
+### Algorithms for implementation
+
+[PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)    
+
 ### **Applicable Explanation Needs**
 
 Since feature interaction just adds one more feature to the (feature-outcome) diagram to show feature-feature interactions, it can be regarded as an expanded version of feature shape, and many of the above findings on feature shape apply to feature interaction as well. Similar to feature shape, feature interaction also supports **counterfactual reasoning** by including two or more features instead of one in feature shape.
@@ -205,6 +217,9 @@ Human uses examples to learn and explain. Examples carry contextual information 
 Similar examples are instances that are similar to the input data regarding their features in the feature space.
 
 ![Similar_example](prototyping/Similar_example.png)
+
+### Algorithms for implementation
+[Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)  
 
 ### **Pros**
 
@@ -267,6 +282,10 @@ A typical or prototypical example is a representative instance for a certain pre
 
 For similar and typical examples, it is straightforward to show several the examples with their corresponding predictions.
 
+### Algorithms for implementation
+
+ [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), [CNN prototype]([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html)) 
+ 
 ### Pros
 One drawback of [similar example](#se) is that it may make users confused about similar instances. Typical example may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of similar example.
 
@@ -307,6 +326,10 @@ For example, an instance C that is predicted as healthy is a counterfactual exam
 ![Counterfactual_example](prototyping/Counterfactual_example.png)
 
 Counterfactual examples can be shown as two instances with their **counterfactual/contrastive features highlighted**, or a **transition** from one instance to the other by gradually changing the counterfactual features.
+
+### Algorithms for implementation
+
+[Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Influential instance](https://arxiv.org/abs/1703.04730),[Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) 
 
 
 ### **Pros and Applicable Explanation Needs**
@@ -359,6 +382,10 @@ The decision rules or decision sets are simple IF-THEN statement with condition 
 
 
 Rules are usually represented using **text**. Other representing formats include table [^Castro2019] or matrix [^Ming2019] to easily align and compare rule clauses.
+
+### Algorithms for implementation
+
+[Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)    
 
 ### **Pros**
 
@@ -430,6 +457,10 @@ Rule is represented graphically as a tree structure, with the branch representin
 
 
 The most common representation is to use a node-link **tree diagram**. other visual representations to show the hierarchical structure include treemap, cladogram, hyperbolic tree, dendrogram, and flow chart.
+
+### Algorithms for implementation
+
+[Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
 
 ### **Pros**
 
@@ -722,7 +753,7 @@ proprietary and privacy, as brought out by one participant:
 I don't know if that's going to be able to be viewed. That's probably
 secret, right?"*
 
-
+---
 # Open-sourced XAI software packages
 
 * [Alibi](https://docs.seldon.io/projects/alibi/en/v0.2.0/overview/getting_started.html)
@@ -730,6 +761,7 @@ secret, right?"*
 * [Softwareblist 2](https://github.com/jphall663/awesome-machine-learning-interpretability#explainability--or-fairness-enhancing-software-packages)
 * [Captum, a pytorch XAI library](https://captum.ai/) 
 
+Note: the included algorithms may not be a complete list. If you want your work to be included, please contact weinaj at sfu dot ca, or open a pull request on the [EUCA project repo](https://github.com/weinajin/end-user-xai).
 
 ---
 Footnotes and References

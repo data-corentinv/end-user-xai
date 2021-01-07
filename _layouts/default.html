@@ -16,21 +16,14 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         <table>
-          {% for nav in site.navigation %}
-            {% if nav.url contains "://" %}
-              <tr><th><a href="{{ nav.url }}">{{ nav.title }}</a></th></tr>
-            {% else %}
-              <tr><th><a href="{{ nav.url | relative_url }}">{{ nav.title }}</a></th>
-                {% if nav.subnav %}
+          
+              <tr><th><a href="/">EUCA Homepage</a></th></tr>
+              <tr><th><a href="/explanatory_form.html">End-User-Friendly Explanatory Forms</a></th></tr>
+              <tr>
                     <ul>
-                    {% for entry in nav.subnav %}
-                      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-                    {% endfor %}
+                      <li><a href="explanatory_form.html#fa">Feature-based explanation</a></li>
                     <ul>
-                {% endif %}
               </tr>
-            {% endif %}
-          {% endfor %}
         </table>
 
         {% if site.show_downloads %}

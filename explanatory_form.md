@@ -344,84 +344,68 @@ The decision rules or decision sets are simple IF-THEN statement with condition 
 ![Decision_rule](prototyping/Rule.png)
 
 
-Rules are usually represented using **text**. Other representing formats include table [^@Castro2019] or matrix [^@Ming2019] to easily align and compare rule clauses.
+Rules are usually represented using **text**. Other representing formats include table [^Castro2019] or matrix [^@Ming2019] to easily align and compare rule clauses.
 
 ### **Pros**
 
-Several participants regarded [rule]{style="color: orange"} can
-*"**explain the logic** behind how the AI makes decisions"* (P27).
-Particularly, the text description format is *"like human explanation"*
-(P01, House, [Trust]{style="color: blue"}), and *"simple enough and
-understandable"* (P11).
+Several participants regarded rule can
+*"**explain the logic** behind how the AI makes decisions"*.
+Particularly, the text description format is *"like human explanation"* that is *"simple enough and understandable"*.
 
 ### **Applicable Explanation Needs**
 
-The above pros make it suitable for verbal
-(Section [2.9](#communicate){reference-type="ref"
-reference="communicate"} [Communication]{style="color: blue"}) and
-written **communications** (Section [2.10](#report){reference-type="ref"
-reference="report"} [Report]{style="color: blue"}). Text format may also
+The above pros make it suitable for [verbal communication](need.md#communicate)) and
+[written **communications** ](need.md#report). Text format may also
 help to dispel confusion, since some participant regarded texts as being
 more precise than images, thus **facilitate
-[learning]{style="color: blue"}**.
+[learning](need.md#learn)**.
 
-*"In this case (Bird, [Unexpected]{style="color: blue"}), I don't want
-to see the highlights ([feature attribute]{style="color: orange"}). I
-want it to see points, the specific parts and give me some explanation.
-If I'm trying to prove myself wrong, or if I want to see how AI system
+> *"If I'm trying to prove myself wrong, or if I want to see how AI system
 can prove me wrong, I want to see more precise text, and precisely point
-out the important information."* (P04)
+out the important information."* 
 
-*"The written helps because it's more exact, whereas the pictures,
-\...the blue in the picture might not be the blue that was in the
-written."* (P05, Bird, [Learning]{style="color: blue"})
+> *"The written helps because it's more exact, whereas the pictures,
+...the blue in the picture might not be the blue that was in the
+written."* 
 
-*"([rule]{style="color: orange"}) It's listing out something that a
-person might miss in the picture."* (P18, Bird)
+> *"(rule) It's listing out something that a person might miss in the picture."*
 
 However, when the input is image data, some participants also mentioned
-providing text explanations only was not enough.
-
-*"([rule]{style="color: orange"}) It doesn't really show you the bird
-that you were looking at. Lots of birds have small thin bills short
-tails\...if I can't see a picture of it, then it's not as helpful."*
-(P06, Bird, [Trust]{style="color: blue"})
-
-And many participants suggested *"ideally you'd want both written and
-pictures"* (P05) to complement each other.
+providing text explanations only was not enough. And many suggested *"ideally you'd want both written and
+pictures"* to complement each other.
 
 ### **Cons**
 
-[rule]{style="color: orange"} is **very sensitive to the degree of
+Rule is **very sensitive to the degree of
 complexity** in text descriptions, as an increase in rule length or
 number of features will dramatically reduce its simplicity and the above
-advantages [@Narayanan2018]. However, if the rule clauses are short, the
+advantages [^@Narayanan2018]. However, if the rule clauses are short, the
 explanation may not be precise and satisfying as well, as P06 pointed
 out,
 
-*"It ([rule]{style="color: orange"}) is just too broad, it could apply
+*"It ([rule) is just too broad, it could apply
 to so many other birds."*
 
 Another concern is that since participants lack technical knowledge,
-some of them misinterpreted [rule]{style="color: orange"} as
+some of them misinterpreted [rule as
 instructions human fed to the AI.
 
-*"([rule]{style="color: orange"}) it is giving very clear instructions
+*"([rule) it is giving very clear instructions
 to the AI, like written text instructions, these are already fed into
-the system."* (P09, Car, [Safety]{style="color: blue"})
+the system."* (P09, Car, [Safety)
 
 ### **Design Implications**
 
-To reduce the cognitive load of complex [rule]{style="color: orange"}, a
+To reduce the cognitive load of complex [rule, a
 few participants suggested **trimming the rules** by only showing the
 shallow level, or only showing rules containing the current input *"just
-show [rule]{style="color: orange"} related to my own house features"*
+show [rule related to my own house features"*
 (P30), then users may query details on demand.
 
 To carefully balance between explanation completeness and usability, if
-the full [rule]{style="color: orange"} is shown, it's beneficial to
+the full [rule is shown, it's beneficial to
 **highlight *local* rule clauses** describing the current instance on
-top of the *global* [rule]{style="color: orange"} explanation.
+top of the *global* [rule explanation.
 
 
 ## <a name="dt"></a> 3.2 Decision tree
@@ -437,11 +421,11 @@ The most common representation is to use a node-link **tree diagram**. other vis
 
 ### **Pros**
 
-Similar to [rule]{style="color: orange"}, participants regarded
-[decision tree]{style="color: orange"} as *"the most logical one"* (P20)
+Similar to [rule, participants regarded
+[decision tree as *"the most logical one"* (P20)
 that *"**tells you the decision-making process**"* (P04):
 
-*"([decision tree]{style="color: orange"}) shows the process of thinking
+*"([decision tree) shows the process of thinking
 with AI, what it's going to do with the information."* (P10)
 
 *"how the algorithm is working, what the machine is thinking about when
@@ -450,27 +434,27 @@ it's coming up with the prediction."* (P16)
 ### **Applicable Explanation Needs**
 
 Participants mentioned an advantage of [decision
-tree]{style="color: orange"} is to
-**[differentiate]{style="color: blue"}**, possibly due to its unique
+tree is to
+**[differentiate**, possibly due to its unique
 tree layout:
 
 *"It explained very well what's the difference between them (the two
-confusing instances)."*(P04, Bird, [Report]{style="color: blue"})
+confusing instances)."*(P04, Bird, [Report)
 
 *"It would show you how to pick up the different types of variants."*
-(P10, Bird, [Report]{style="color: blue"})
+(P10, Bird, [Report)
 
-*"I think this ([decision tree]{style="color: orange"}) is the graphic
+*"I think this ([decision tree) is the graphic
 comparison, like this beak might be sharper or smaller than this one,
 all those comparisons help"* (P09, Bird,
-[Unexpected]{style="color: blue"}).
+[Unexpected).
 
 Such advantage also supports **counterfactual reasoning** by checking
 alternative feature values on the adjacent branches.
 
-*"([Decision tree]{style="color: orange"}) can see how to improve. It
+*"([Decision tree) can see how to improve. It
 has a comparison with different outputs."* (P29, Health,
-[Trust]{style="color: blue"})
+[Trust)
 
 *"Where does my house stands, if I'd be here, then I maybe try to change
 some of my features, to see how do these features affect my house price,
@@ -481,37 +465,37 @@ or other houses compared to my own house."* (P30, House)
 Several participants brought up its **weakness in communication and
 interpretation**.
 
-*"([Decision tree]{style="color: orange"}) is not natural language, it
+*"([Decision tree) is not natural language, it
 is more difficult to explain to my family."* (P01, House,
-[Communication]{style="color: blue"})
+[Communication)
 
 *"This is more like a logical thing for me to see. But I wouldn't use
 this as an explanation to family, because that's just weird. I don't
 want to rack their brains too much."* (P20, House,
-[Communication]{style="color: blue"})
+[Communication)
 
 Indeed, in the study even with a two-feature two-layer [decision
-tree]{style="color: orange"}, a number of participants commented:
+tree, a number of participants commented:
 
-*"It's confusing."* (P05, Bird, [Learning]{style="color: blue"})
+*"It's confusing."* (P05, Bird, [Learning)
 
 *"It got too much information."* (P16, Bird,
-[Unexpected]{style="color: blue"})
+[Unexpected)
 
 *"I don't really understand this one. I think it's a little bit
-complicated."* (P08, Bird, [Learning]{style="color: blue"})
+complicated."* (P08, Bird, [Learning)
 
 Since it is less interpretable than other forms, some participants
 suggested to show it on-demand.
 
-*"I don't think these two ([decision tree]{style="color: orange"},
-[decision flow chart]{style="color: orange"}) are necessary to show in
+*"I don't think these two ([decision tree,
+[decision flow chart) are necessary to show in
 the first UI. Maybe these two can be hidden in an icon that says
-'process'. Because it ([decision tree]{style="color: orange"}) is more
-like a program in process.''* (P04, Bird, [Trust]{style="color: blue"})
+'process'. Because it ([decision tree) is more
+like a program in process.''* (P04, Bird, [Trust)
 
 Besides the tree structure, we used another flow chart visual
-representation ([decision flow chart]{style="color: orange"}) in the
+representation ([decision flow chart) in the
 study. In tasks that the inputs were images (Bird and Car task), quite a
 few participants found neither the tree nor the flow chart structure
 helpful, and they only focused on the saliency features or objects the
@@ -523,13 +507,13 @@ the belly (the highlighted region shown in the flow chart) matter."*
 
 ### **Design Implications**
 
-Similar to the suggestions in [rule]{style="color: orange"}, to reduce
+Similar to the suggestions in [rule, to reduce
 its complexity, one participant suggested **trimming the tree** and just
 show the main branches, hiding the deeper branch details and only
 showing them on-demand.
 
 *"You could use this one (the two-feature [decision
-tree]{style="color: orange"}) as a beginning, based on this, and you
+tree) as a beginning, based on this, and you
 click (one branch) to another in-depth version of the price calculation.
 Because this (price prediction) range is still very far wide, and the
 features given is not enough, so if you want to (check details) maybe
@@ -547,13 +531,13 @@ decisions, and for comparison with other counterfactual instances.
 *"I know there're factors that could be other houses that lead to
 different prices, but I still see it as, 'okay, I plug in my own numbers
 here and what's my price?' So it's still specific to me.'* (P20, House,
-[Trust]{style="color: blue"}) -- Displays local as well as global
+[Trust) -- Displays local as well as global
 explanations
 
 *"The only thing we need is to indicate my own position on this
-([decision tree]{style="color: orange"}) branch. \....Then I can chase
+([decision tree) branch. \....Then I can chase
 the features of my house."* (P30, House,
-[Unexpected]{style="color: blue"}) -- Suggests to highlight the pathway
+[Unexpected) -- Suggests to highlight the pathway
 for user's interested instance
 
 ![ **Visualizing the similarities of the explanatory forms**. The
@@ -564,7 +548,7 @@ number below its name, also proportional to its dot size. The dot color
 indicates one of the four categories in the framework the explanatory
 type belongs to: [feature]{style="color: lightorange"},
 [example]{style="color: example"}, [rule]{style="color: rule"}, and
-[supplementary information]{style="color: blue"}. K-means clustering
+[supplementary information. K-means clustering
 analysis on the 2D positional data yielded four clusters: **Cluster 1**:
 output, performance, dataset; **Cluster 2**: feature attribute, decision
 tree, rule, decision flow chart; **Cluster 3**: typical example, similar
@@ -591,22 +575,22 @@ Input is end-users' input data for AI's prediction. It is local explanation.
 ![Input](prototyping/Input.png)
 
 Input serves as necessary background information, and participants regarded
-[input]{style="color: orange"} as a *"profile"* (P24) that *"stating the
+[input as a *"profile"* (P24) that *"stating the
 facts"* (P20). It allows participants to **understand what information
 AI's decision is based on**, and can help "debug'' to see *"if AI is
-missing the most important feature"* in [input]{style="color: orange"}
-(P22, Health, [Bias]{style="color: blue"}), and *"whether or not the
-[input]{style="color: orange"} is enough for it (AI) to make that
-decision"* (P16, Health, [Trust]{style="color: blue"}).
+missing the most important feature"* in [input
+(P22, Health, [Bias), and *"whether or not the
+[input is enough for it (AI) to make that
+decision"* (P16, Health, [Trust).
 
-When checking [input]{style="color: orange"}, participants tended to
+When checking [input, participants tended to
 intuitively *"look for certain features"* (P14) to judge by themselves.
 And in the card sorting, some participants used
-[input]{style="color: orange"} as an anchor, put it side-by-side with
-example-bases explanatory forms ([similar]{style="color: orange"},
-[typical]{style="color: orange"}, and [counterfactual
-example]{style="color: orange"}) for comparison. Quantitative results
-led to the same findings, as [input]{style="color: orange"} was
+[input as an anchor, put it side-by-side with
+example-bases explanatory forms ([similar,
+[typical, and [counterfactual
+example) for comparison. Quantitative results
+led to the same findings, as [input was
 clustered together with other example-based explanatory forms
 (Figure [fig:sim](#fig:sim){reference-type="ref"
 reference="fig:sim"}, Supplementary Material S2 Figure ??).
@@ -623,7 +607,7 @@ Sometimes the output prediction is accompanied by **decision certainty** level. 
 ![Input](prototyping/Input.png)
 
 
-In our study, the [output]{style="color: orange"} card contained
+In our study, the [output card contained
 prediction information of a point prediction, a prediction range, and
 their corresponding uncertainty level (for regression tasks); Or top
 three predictions and their likelihood (for classification tasks)
@@ -640,38 +624,38 @@ house price prediction is 650k), some preferred to see a **prediction
 range** in regression tasks (e.g.: house price is 638-662k), or top
 predictions list in classification tasks, because such prediction range
 *"give choices"* (P05, Bird classification task,
-[Differentiation]{style="color: blue"}), *"acknowledges a possibility"*
-(P18, Bird, [Unexpected]{style="color: blue"}), rank the decision
+[Differentiation), *"acknowledges a possibility"*
+(P18, Bird, [Unexpected), rank the decision
 priorities (P03, Car classification task,
-[Safety]{style="color: blue"}), help them *"(the range) to see how
+[Safety), help them *"(the range) to see how
 different between my and AI prediction"* (P01, House regression task,
-[Unexpected]{style="color: blue"}), and provide rooms for adjustment and
+[Unexpected), and provide rooms for adjustment and
 negotiation:
 
 *"If I want to sell it higher, and I'll put 662k (the upper bound). Or
 if I wanted to sell it fast, then I'll put 638k (the lower bound).
 There's always a range, it's not necessarily just one price. And people
 will always bargain too."* (P20, House,
-[Communication]{style="color: blue"})
+[Communication)
 
 And sometimes they *"don't even need to know the (prediction) number
 exactly. This (range) tells me that (my diabetes risk) it's high. I have
 to do something. So that's what I want to know"* (P17, Health regression
-task, [Trust]{style="color: blue"}), and the range gives a higher
+task, [Trust), and the range gives a higher
 certainty than a single point prediction which enhanced participants'
 trust.
 
 In contrast, some other participants were more acceptable to a narrower
 range or a **point prediction**, because they saw a wider range of
 prediction had its drawbacks: *"(the prediction range) shows too much
-fluctuation"* (P07, House, [Trust]{style="color: blue"}); And seeing the
+fluctuation"* (P07, House, [Trust); And seeing the
 full predictions list (some with lower prediction likelihoods) may make
 them confused and discredit AI's decisions. Thus a narrower range may
 give them more confidence about AI's prediction.
 
 *"Seeing that the range is pretty small makes me a lot more confident
 that they've got enough data to actually be drawing conclusions."* (P16,
-Health, regression task, [Trust]{style="color: blue"})
+Health, regression task, [Trust)
 
 For the prediction likelihood/uncertainty/confidence[^1], some
 participants **had a hard time understanding the meaning of
@@ -680,11 +664,11 @@ uncertainty** and required researchers' explanations. A high certainty
 into believing in AI"* (P10), which is consistent with the recent
 quantitative finding on certainty level and trust
 calibration [@Zhang2020]. Especially for the explanation need where AI's
-prediction is [unexpected]{style="color: blue"}, participants may
+prediction is [unexpected, participants may
 abandon their own judgment due to AI's high certainty.
 
 *"If it had a high certainty, then I would want to know why my
-estimation is wrong."* (P10, House, [Unexpected]{style="color: blue"})
+estimation is wrong."* (P10, House, [Unexpected)
 
 
 ## <a name="perf"></a> 4.3 Performance
@@ -696,14 +680,14 @@ Performance metrics (such as accuracy, confusion matrix, ROC curve, mean squared
 ![Performance](prototyping/Performance.png)
 
 
-After checking the [performance]{style="color: orange"} information,
+After checking the [performance information,
 most participants realized the probabilistic nature of AI decisions:
 *"AI is not perfect"* (P20), *"they (AI) make errors sometimes"* (P05).
 If the performance is within their acceptable range, participants would
 accept the "imperfect AI'', and it helped them to **set a proper
 expectation for AI's performance**.
 
-*"I get it's downside. [Performance]{style="color: orange"} warns me to,
+*"I get it's downside. [Performance warns me to,
 'Hey, you know, it's not really accurate. There's some room for error.'
 "* (P24)
 
@@ -718,29 +702,29 @@ Almost all participants understood the meaning of accuracy (error rate)
 in classification tasks, whereas many participants had a difficult time
 understanding the margin of error in regression tasks.
 
-*"[Performance]{style="color: orange"} is really in detail. I mean not
+*"[Performance is really in detail. I mean not
 everyone is familiar with statistics, like mean error"* (P30, House,
 regression task).
 
-Unlike the uncertainty level in [output]{style="color: orange"}
+Unlike the uncertainty level in [output
 (Section [1.10](#output){reference-type="ref" reference="output"}) which
 is case-specific decision quality information, a few participants
-noticed [performance]{style="color: orange"} is model-wide information,
+noticed [performance is model-wide information,
 and just provides *"general information showing the trust level of the
 system"* (P04) is *"too general, I would want to know specifically why
 (the speed) it's going down in this particular case of driving"* (P05,
-Car, [Unexpected]{style="color: blue"}). Thus they suggested there was
+Car, [Unexpected). Thus they suggested there was
 no need to show it every time, *"you should know before you use AI"*
 (P11).
 
 However, in some particular explanation needs such as to [detect
-bias]{style="color: blue"} (Section [2.3](#bias){reference-type="ref"
+bias (Section [2.3](#bias){reference-type="ref"
 reference="bias"}), participants may require to check the fine-grained
 performance analysis on interested outcome.
 
-*"It (fine-grained [performance]{style="color: orange"} on road/weather
+*"It (fine-grained [performance on road/weather
 conditions) explains how often I should be confident in rainy days."*
-(P19, Car, [Safety]{style="color: blue"})
+(P19, Car, [Safety)
 
 ## <a name="data"></a> 4.4 Dataset
 
@@ -749,50 +733,50 @@ Dataset information includes the metadata on the dataset where the model is trai
 ![Dataset](prototyping/Dataset.png)
 
 
-In our study, the [dataset]{style="color: orange"} card contains
+In our study, the [dataset card contains
 training dataset distribution of the prediction outcomes. Even after
 researchers' explanation, some participants did not well understand or
 **misunderstood** the information on this card (for example, some
 misinterpret the distribution graph as [feature
-shape]{style="color: orange"}), indicating it requires a higher
+shape), indicating it requires a higher
 AI/math/visualization literacy. For those who comprehended the
-[dataset]{style="color: orange"} information, some participants tended
+[dataset information, some participants tended
 to link the dataset size with model accuracy and trust.
 
 *"The higher the (training data distribution) curve goes, then I would
 be more confident that they have a big pool of data to pull from."*(P31,
-Health, [Unexpected]{style="color: blue"})
+Health, [Unexpected)
 
 Some participants intuitively wanted to check their own data point
 within the training data distribution, and use it as a dashboard to
 **navigate, identify, and filter interested instances** such as
-([similar]{style="color: orange"}, [typical]{style="color: orange"}, and
-[counterfactual example]{style="color: orange"}), to compare what are
+([similar, [typical, and
+[counterfactual example), to compare what are
 the same and different features between their input and the interested
 instances.
 
 *"I want to see which region I fall in the population, and compare with
 people around to see why my (diabetes) risk is only 10% with a family
-history."* (P01, Health, [Unexpected]{style="color: blue"})
+history."* (P01, Health, [Unexpected)
 
 Nevertheless, in practice there may be some restrictions on reviewing
-the detailed [dataset]{style="color: orange"} information due to data
+the detailed [dataset information due to data
 proprietary and privacy, as brought out by P19:
 
 *"I want to know the number of data and the details of it to verify. But
 I don't know if that's going to be able to be viewed. That's probably
-secret, right?"* (P19, House, [Expected]{style="color: blue"})
+secret, right?"* (P19, House, [Expected)
 
 
 # Open-sourced XAI software packages
-[Alibi](https://docs.seldon.io/projects/alibi/en/v0.2.0/overview/getting_started.html)
 
-[Software list1](https://github.com/lopusz/awesome-interpretable-machine-learning#software)
-
-[Softwareblist 2](https://github.com/jphall663/awesome-machine-learning-interpretability#explainability--or-fairness-enhancing-software-packages)
-
-[Captum, a pytorch XAI library](https://captum.ai/) 
+* [Alibi](https://docs.seldon.io/projects/alibi/en/v0.2.0/overview/getting_started.html)
+* [Software list1](https://github.com/lopusz/awesome-interpretable-machine-learning#software)
+* [Softwareblist 2](https://github.com/jphall663/awesome-machine-learning-interpretability#explainability--or-fairness-enhancing-software-packages)
+* [Captum, a pytorch XAI library](https://captum.ai/) 
 
 
-
-[^@Castro2019]: [Surrogate Decision Tree Visualization](http://ceur-ws.org/Vol-2327/IUI19WS-ExSS2019-15.pdf)
+---
+[^Castro2019]: [Surrogate Decision Tree Visualization](http://ceur-ws.org/Vol-2327/IUI19WS-ExSS2019-15.pdf)
+[^@Ming2019]: [RuleMatrix:Visualizing and Understanding Classifiers with Rules](https://arxiv.org/abs/1807.06228)
+[^@Narayanan2018]: [How do Humans Understand Explanations from Machine Learning Systems? An Evaluation of the Human-Interpretability of Explanation](https://arxiv.org/abs/1802.00682)

@@ -24,17 +24,43 @@ Index
 11. [Performance](#perf)  
 12. [Dataset](#data)  
 
-# Feature-based explanation
+# <a name="feature"></a>1. Feature-based explanation
 
-Feature-based explanations are the most common form of explanation information. We refer _feature_ to a piece of information that is carried out by the input data, where an input can be described in terms of its features, be they learned or designed. For example, a real estate agent can describe a house by its size, location, and age, three descriptive features; The feature of an image can be the individual pixels, a car object highlighted, or an explicit concept of "car". To use features for explanations, the feature representation must be human-interpretable. The feature space is also the cornerstone of other explanatory forms: example-based explanations are instances with similar or contrastive features; and rule-based explanations are features connected by logic and conditional statements. The feature-based explanations consist of three explanatory forms:
+Feature-based explanations are the most common form of explanation information. 
 
-## <a name="fa"></a> [Feature attribute](#fa)
+We refer _feature_ to a piece of information that is carried out by the input data. For example, a real estate agent can describe a house by its size, location, and age, three descriptive features; The feature of an image can be the individual pixels, a car object highlighted, or an explicit concept of "car". 
+
+To use features for explanations, the feature representation must be human-interpretable. 
+
+The feature-based explanations consist of three explanatory forms:
+
+## <a name="fa"></a> 1.1 Feature attribute
 
 ![Feature_attribute](prototyping/Feature_attribute.png)
 
+It indicates which features are important for the decision, and what are their attributions to the prediction. For example, it can be a list of key features and their importance scores to the house price prediction, or a color map overlaid on input image indicating the important parts/objects for the recognition. It assumes the prediction is explainable by linearly addable important features.
 
-### <a name="fs"></a> Feature shape
-### Feature interaction
+### Visual representation
+
+Its visual representation largely depend on the data type of the features. For image and text data, overlaying a **saliency map** or color map on the input is the common visualization. It uses sequential colors to code the fine-grained feature importance score for individual feature (could be pixels for an image input, words for text data). For image/video input data, other popular visualizations include using _masks_, _segmentation maps_ or _bounding boxes_ on the saliency objects.
+
+To visualize multiple feature attributes for tabular or text data, a **bar chart** is typical choice. The variations of bar plot include waterfall plot, treemap, wrapped bars, packed bars, piled bars, Zvinca plots, and tornado plot. _Box plot_ can be used to visualize the distribution of the feature importance score. Its variations include violin plot and beeswarm plot that show more detailed data distribution and skewness.
+
+## <a name="fs"></a> 1.2 Feature shape
+
+![Feature_shape](prototyping/Feature_shape.png)
+
+It shows the relationship between one particular feature and the outcome, such as the house size to the predicted house price. Usually, it is presented as a line plot (for continuous feature) or a bar plot (for categorical feature), depicting whether the relationship between the outcome and a feature is monotonic, linear, or more complex.
+
+### Visual representation
+**Line plot** and _scatter plot_ are common visualizations to show the effect of an individual feature to the predicted outcome.
+
+## <a name="fi"></a>1.3 Feature interaction
+
+When features interact with each other, their total effect on the outcome may not be a linear sum of each individual effect. \[Fi\]{style="color: orange"} considers such interaction and shows the total effect of two or three features to the outcome. It can be regarded as an extension of \[fs\]{style="color: orange"} by taking two or more features into account.
+
+### Visual representation
+**2D or 3D heatmap** is used to visualize the effect of feature interactions on the predictions. Limited by the visualization, the heatmap can only show interaction for at most three features (using 3D heatmap). More complicated multiple paired feature-feature interactions can be visualized using matrix heatmap, node-link network, or contingency wheel.
 
 ## Example-based explanation
 ### Similar example

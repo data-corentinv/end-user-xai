@@ -1,3 +1,4 @@
+# EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
 The EUCA framework is a prototyping tool to design explainable artificial intelligence for non-technical end-users.
 
 It can help you quickly build a low-fidelity explainable AI (XAI) prototype, and implement it as a functional one. 
@@ -82,7 +83,7 @@ We list the corresponding algorithms after each explanatory component, so that y
 
 
 
-# Prototyping materials for download
+# <a name="template"></a> Prototyping materials for download
 We provide the following prototyping materials:
 1. Templates: Blank cards card grids with their explanatory type name
 2. Examples: We demonstrate creating prototype for tabular or sequential input, and for image input respectively. 
@@ -100,11 +101,11 @@ We have the following versions:
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
 
-# How to cite the EUCA framework?
+# <a name="cite"></a> How to cite the EUCA framework?
 [Research paper]()
 
 
-# I used EUCA to design a prototype, can I share my XAI design?
+# <a name="share"></a> I used EUCA and I want to share my XAI design
 
 You can inspire other designers by sharing your sketches, designs and prototypes using EUCA. We will post your design on the EUCA page.
 

@@ -13,17 +13,17 @@ navigation:
   - title: Explanation Needs
     url: /need
 
+logo: /assets/img/favicon.png
 
-avatar: /fig/euca_logo.png
 
-social-network-links:
-  email: "weinaj@sfu.ca"
-  github: weinajin
 
-share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
-  vk: false
 
-url-pretty: "end-user-xai.github.io"
+
+
+
+
+
+
+
+
+

@@ -34,35 +34,35 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  | **Applicable needs**
  | **XAI algorithms** |
 |---|---|---|---|---|---|---|
-|**Feature Attribute**
+|[**Feature Attribute**](#fa)
  | Local/Global
  | Tabular/Img/Txt
  |  Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.
  |  Illusion of causality, confirmation bias
  |  To verify AI's decision
- | [LIME ](Ribeiro2016a), [SHAP](Lundberg), [CAM](Zhoub), [LRP](Bach2015), [TCAV](Kim)   |
-|**Feature Shape**
+ | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](Lundberg), [CAM](Zhoub), [LRP](Bach2015), [TCAV](Kim)   |
+|[**Feature Shape**](#fs)
  | Global
  | Tabular 
  | Graphical representation, easy to understand the relationship between one feature and prediction
  | Lacks feature interaction; Information overload if multiple feature shapes are presented
  |  To control and improve the outcome; To reveal bias
  | [PDP](Friedman2001), [ALE](Apley2016), [GAM](Tan) |
-|**Feature Interaction**
+|[**Feature Interaction**](#fi)
  |  Global
  | Tabular
  |  Show feature-feature interaction
  |  The diagram on multiple features is difficult to interpret
  |  To control and improve the outcome
  |  [PDP](Friedman2001), [ALE](Apley2016), [GA2M](Caruana2015) |
-|**Similar Example**
+|[**Similar Example**](#se)
  |Local
  | Tabular/Img/Txt
  |  Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples
  |  It does not highlight features within examples to enable users’ side-by-side comparison
  |  To verify the decision 
  |  Nearest neighbour, [CBR ](Kolodner1992)  |
-|**Typical Example**
+|[**Typical Example**](#te)
  | Local/Global
  | Tabular/Img/Txt
  | Use prototypical instances to show learned representation;
@@ -70,7 +70,7 @@ Reveal potential problems of the model
  |  Users may not appreciate the idea of typical cases
  |   To verify the decision; To reveal bias
  | k-Mediods, [MMD-critic ](Kim2016),  [Generate prototype ](Simonyan, Mahendran2014a), [CNN prototype](Lia, Chen) |
-|**Counterfactual Example**
+|[**Counterfactual Example**](#ce)
  | Local
  | Tabular/Img/Txt
  |  Helpful to identify the differences between the current outcome and another contrastive outcome 
@@ -81,14 +81,14 @@ To control and improve the outcome
 [Influential instance](WeiKoh2017),
 [Progression](Kawaharaa), [Visual](Goyal)
 , [Pertinent Negative](Dhurandhar) |
-|**Decision Rules/Sets**
+|[**Decision Rules/Sets**](#rl)
  | Global
  | Tabular/Img/Txt
  |  Present decision logic, *"like human explanation"*
  |  Need to carefully balance between completeness and simplicity of explanation
  |  Facilitate users' learning, report generation, and communication with other stakeholders
  | [Bayesian Rule Lists](Yang2017), [LORE](Guidotti2018c), [Anchors](Ribeiro)  |
-|**Decision tree**
+|[**Decision tree**](#dt)
  | Global
  | Tabular/Img/Txt
  |  Show decision process, explain the differences

@@ -6,18 +6,18 @@ system, may vary from time to time based on different contexts or usage
 scenarios.  We summarized ten potential [***explanation needs***](#)
 from prior works [^prior] as follows:
 
-1.   [**Calibrate trust**](#trust): trust is a key to
+1.   **[Calibrate trust](#trust)**: trust is a key to
     establish human-AI decision-making partnership. Since users can
     easily distrust or overtrust AI, it is important to calibrate the
     trust to reflect the capabilities of AI systems [^Turner] [^Zhang2020].
 
-2.   [**Ensure safety**](#safe): users need to ensure
+2.   **[Ensure safety](#safe)**: users need to ensure
     safety of the decision consequences.
 
-3.   [**Detect bias**](#bias): users need to ensure the
+3.   **[Detect bias](#bias)**: users need to ensure the
     decision is impartial and unbiased.
 
-4.   [**Resolve disagreement with AI**](#unexpected): the AI
+4.   **[Resolve disagreement with AI](#unexpected)**: the AI
     prediction is *unexpected* and there are
     disagreements between users and AI. 
     
@@ -25,27 +25,27 @@ from prior works [^prior] as follows:
     *expected* and aligns with users'
     expectations.
 
-6.   [**Differentiate similar instances**](#differentiate): due to
+6.   **[Differentiate similar instances](#differentiate)**: due to
     the consequences of wrong decisions, users sometimes need to discern
     similar instances or outcomes. For example, a doctor differentiates
     whether the diagnosis is a benign or malignant tumor.
 
-7.   [**Learn**](#learn): users need to gain knowledge,
+7.   **[Learn](#learn)**: users need to gain knowledge,
     improve their problem-solving skills, and discover new knowledge
 
-8.   [**Improve**](#improve): users seek causal factors to
+8.   **[Improve](#improve)**: users seek causal factors to
     control and improve the predicted outcome.
 
-9.   [**Communicate with stakeholders**](#communicate): many
+9.   **[Communicate with stakeholders](#communicate)**: many
     critical decision-making processes involve multiple stakeholders,
     and users need to discuss the decision with them.
 
-10.   [**Generate reports**](#report): users need to utilize
+10.   **[Generate reports](#report)**: users need to utilize
     the explanations to perform particular tasks such as report
     production. For example, a radiologist generates a medical report on
     a patient's X-ray image.
 
-11.   [**Trade-off multiple objectives**](#multi): AI may be
+11.   **[Trade-off multiple objectives](#multi)**: AI may be
     optimized on an incomplete objective while the users seek to fulfill
     multiple objectives in real-world applications. For example, a
     doctor needs to ensure a treatment plan is effective as well as has

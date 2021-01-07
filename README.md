@@ -1,4 +1,4 @@
-d# EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
+# EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
 
 
 The EUCA framework is a **prototyping tool** to design explainable artificial intelligence for non-technical end-users.

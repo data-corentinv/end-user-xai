@@ -117,44 +117,43 @@ It shows the relationship between one particular feature and the outcome, such a
 
 Participants **liked its graphical representation** of showing the relationship between one feature and prediction.
 
-*"It (\[feature shape\]{style="color: orange"} on exercise and diabetes risk) feels so easy to latch onto like it's something that you can impact and something that's very tangible."* (P22, Health, \[Trust\]{style="color: blue"})
+>*"It (feature shape on exercise and diabetes risk) feels so easy to latch onto like it's something that you can impact and something that's very tangible."* 
 
 ### **Applicable Explanation Needs**
 
-The slope of the curve in \[feature shape\]{style="color: orange"} line chart allows users to easily check how changing one feature would lead to the change of the outcome, thus many participants intuitively used \[feature shape\]{style="color: orange"} for **counterfactual reasoning**, especially to \[improve the predicted outcome\]{style="color: blue"}.
+The slope of the curve in feature shape line chart allows users to easily check how changing one feature would lead to the change of the outcome, thus many participants intuitively used feature shape for **counterfactual reasoning**, especially to improve the predicted outcome.
 
-*"I would be interested to see how much like here (\[feature shape\]{style="color: orange"}) increasing the exercise by a small amount actually makes a really big difference. So that's also helpful to decide what you should be focusing on to try to avoid it (diabetes). The shape of the curve actually helps. Coz if I was out here \[pointing to the flat part of the curve\], then it would not be as helpful for me to increase my exercise."* (P16, Health, \[Improvement\]{style="color: blue"})
+>*"I would be interested to see how much like here (feature shape) increasing the exercise by a small amount actually makes a really big difference. So that's also helpful to decide what you should be focusing on to try to avoid it (diabetes). The shape of the curve actually helps. Coz if I was out here pointing to the flat part of the curve, then it would not be as helpful for me to increase my exercise."*
 
-By showing the relationship between the protected feature and outcomes, it also helps to reveal \[bias\]{style="color: blue"}, i.e.: to check if the different values of the protected features (such as male, female) will lead to differences in prediction (such as loan approval).
+By showing the relationship between the protected feature and outcomes, it also helps to reveal bias, i.e.: to check if the different values of the protected features (such as male, female) will lead to differences in prediction (such as loan approval).
 
-*"If these features are related to diabetes, then it (AI) should present some (\[feature shape\]{style="color: orange"}) cards to tell me if the gender, age and ethnicity (will affect diabetes prediction), so this image (\[feature shape\]{style="color: orange"}) would be really helpful."* (P02, Health, \[Bias\]{style="color: blue"})
+>*"If these features are related to diabetes, then it (AI) should present some (feature shape) cards to tell me if the gender, age and ethnicity (will affect diabetes prediction), so this image (feature shape) would be really helpful."*
 
 ### **Cons**
 
-One drawback of \[feature shape\]{style="color: orange"} pointed out by a few participants is that it does **not considerate feature interactions**.
+One drawback of feature shape pointed out by a few participants is that it does **not considerate feature interactions**.
 
-*"This one (\[feature shape\]{style="color: orange"} on house size and price) is not based on the bigger the house, the higher you can sell, because it is based on a lot of features. Let's say the house is 2000 square feet. It was built in 1980. Another one is 1000 square feet, but it's just built a decade ago. So its (the latter) price will be much higher than this one (the former). You cannot just base on a house area and then determine the price."* (P30)
+>*"This one (feature shape on house size and price) is not based on the bigger the house, the higher you can sell, because it is based on a lot of features. Let's say the house is 2000 square feet. It was built in 1980. Another one is 1000 square feet, but it's just built a decade ago. So its (the latter) price will be much higher than this one (the former). You cannot just base on a house area and then determine the price."* 
 
-Another drawback is that since one \[feature shape\]{style="color: orange"} graph can only present one feature, to show multiple features' \[feature shape\]{style="color: orange"} the interface will need multiple graphs that may --
+Another drawback is that since one feature shape graph can only present one feature, to show multiple features' feature shape the interface will need multiple graphs that may --
 
-*"make your page so **overloaded**, so people just get tired. You want to make it as clear as possible. So if (there is) some unnecessary information people just intimidated."* (P28)
+> *"make your page so **overloaded**, so people just get tired. You want to make it as clear as possible. So if (there is) some unnecessary information people just intimidated."* 
 
 ### **Design Implications**
 
-One suggestion for the above weaknesses is that \[feature shape\]{style="color: orange"} can be accompanied by other explanatory forms and **show on-demand**. Users can select their interested features from a feature list or other explanatory forms such as \[feature attribute\]{style="color: orange"}, \[counterfactual example\]{style="color: orange"} or \[rule\]{style="color: orange"}, and choose to view \[feature shape\]{style="color: orange"} diagrams of the selected features, as participants suggested:
+One suggestion for the above weaknesses is that feature shape can be accompanied by other explanatory forms and **show on-demand**. Users can select their interested features from a feature list or other explanatory forms such as feature attribute, counterfactual example or rule, and choose to view feature shape diagrams of the selected features, as participants suggested:
 
-*"If I can click on this (\[feature attribute\]{style="color: orange"}) and then I can get this chart (\[feature shape\]{style="color: orange"}), I think that would be good. I don't think everyone is going to click it, but I think (if) people want more information, you will click it."* (P20, House)
+> *"If I can click on this (feature attribute) and then I can get this chart (feature shape), I think that would be good. I don't think everyone is going to click it, but I think (if) people want more information, you will click it."* 
 
-Many participants tended to check the **local position of their input data point** on the global \[feature shape\]{style="color: orange"} diagram.
+Many participants tended to check the **local position of their input data point** on the global feature shape diagram.
 
-*"It's good to see where exactly on a (house price) scale you are."* (P20, House, \[Trust\]{style="color: blue"})
+> *"It's good to see where exactly on a (house price) scale you are."* 
 
-And P30 suggested \[feature shape\]{style="color: orange"} could have the assumption that for all the other features that are kept constant, they should be as similar to user's input features as possible.
+And one participant suggested feature shape could have the assumption that for all the other features that are kept constant, they should be as similar to user's input features as possible.
 
-*"The AI should assume all the other features are almost the same as mine, considering this hypothesis then this is the (\[feature shape\]{style="color: orange"}) curve"*.
+>*"The AI should assume all the other features are almost the same as mine, considering this hypothesis then this is the (feature shape) curve"*.
 
 ## <a name="fi"></a>1.3 Feature Interaction
-
 
 
 When features interact with each other, their total effect on the outcome may not be a linear sum of each individual effect. Ficonsiders such interaction and shows the total effect of two or three features to the outcome. It can be regarded as an extension of fsby taking two or more features into account.
@@ -167,19 +166,19 @@ When features interact with each other, their total effect on the outcome may no
 
 ### **Applicable Explanation Needs**
 
-Since \[feature interaction\]{style="color: orange"} just adds one more feature to the (feature-outcome) diagram to show feature-feature interactions, it can be regarded as an expanded version of \[feature shape\]{style="color: orange"}, and many of the above findings on \[feature shape\]{style="color: orange"} apply to \[feature interaction\]{style="color: orange"} as well. Similar to \[feature shape\]{style="color: orange"}, \[feature interaction\]{style="color: orange"} also supports **counterfactual reasoning** by including two or more features instead of one in \[feature shape\]{style="color: orange"}.
+Since feature interaction just adds one more feature to the (feature-outcome) diagram to show feature-feature interactions, it can be regarded as an expanded version of feature shape, and many of the above findings on feature shape apply to feature interaction as well. Similar to feature shape, feature interaction also supports **counterfactual reasoning** by including two or more features instead of one in feature shape.
 
-*"(\[feature interaction\]{style="color: orange"} on age-body weight interaction) If you put yourself in a hypothetical guessing, you're in this age and this is your body weight, and you can already tell the chances (of diabetes) are high."* (P23, Health, \[Trust\]{style="color: blue"})
+> *"(feature interaction on age-body weight interaction) If you put yourself in a hypothetical guessing, you're in this age and this is your body weight, and you can already tell the chances (of diabetes) are high."* 
 
 ### **Cons**
 
-*"The graph is **less accessible to understand**"\* (P22). In our study, only a few participants could correctly interpret the 2D heatmap of two feature interactions.
+*"The graph is **less accessible to understand**"*. In our study, only a few participants could correctly interpret the 2D heatmap of two feature interactions.
 
 ### **Design Implications**
 
-Similar to \[feature shape\]{style="color: orange"}, participants would like to **choose their interested feature pairs** to check their interactions on \[feature interaction\]{style="color: orange"} diagram. Since the combination of features is large, the XAI system may be able to **suggest interesting feature interactions and prioritize** the feature pairs which have significant interactions.
+Similar to feature shape, participants would like to **choose their interested feature pairs** to check their interactions on feature interaction diagram. Since the combination of features is large, the XAI system may be able to **suggest interesting feature interactions and prioritize** the feature pairs which have significant interactions.
 
-*"If I click on any two of them (features), show the relationship between them. If I can choose age and blood sugar level, then probably there is some correlation between them. If it is statistically significant, then I would want to know that. If there is no significance between, for instance, age and body weight, then I don't think it should tell me that. If the AI can tell me that this combination really is important for you to look into, then the priority would also make a lot of sense."* (P23, Health, \[Unexpected\]{style="color: blue"})
+> *"If I click on any two of them (features), show the relationship between them. If I can choose age and blood sugar level, then probably there is some correlation between them. If it is statistically significant, then I would want to know that. If there is no significance between, for instance, age and body weight, then I don't think it should tell me that. If the AI can tell me that this combination really is important for you to look into, then the priority would also make a lot of sense."* 
 
 ---
 
@@ -194,53 +193,53 @@ Similar examples are instances that are similar to the input data regarding thei
 
 ### **Pros**
 
-Participants **intuitively understood** the concept of \[similar example\]{style="color: orange"}. \[Similar example\]{style="color: orange"} uses analogical reasoning to facilitate to the sense-making process.
+Participants **intuitively understood** the concept of similar example. Similar example uses analogical reasoning to facilitate to the sense-making process.
 
-*"It just intuitively makes sense to me. ...\[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"} are much easier. I don't have to think about them before figuring it out."* (P16, Bird, \[Trust\]{style="color: blue"})
+*"It just intuitively makes sense to me. ...similar and typical example are much easier. I don't have to think about them before figuring it out."* (P16, Bird, Trust)
 
-*"(\[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"}) It's similar to how humans make decisions, like we compare similar images to the original (input) one."* (P02, Bird, \[Trust\]{style="color: blue"})
+*"(similar and typical example) It's similar to how humans make decisions, like we compare similar images to the original (input) one."* (P02, Bird, Trust)
 
 ### **Applicable Explanation Needs**
 
-Unlike other explanatory forms that reveal AI's decision-making process (such as rule-based explanations) , *"even though these (\[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"}) aren't much specific about how it's actually doing the (decision) process"* (P16), participants' minds automatically made up such a process by themselves by **comparing instances**. Such comparison mainly allow users to **verify AI's decisions** and to calibrate their trust. The common explanation needs in which \[similar example\]{style="color: orange"} were selected are:
+Unlike other explanatory forms that reveal AI's decision-making process (such as rule-based explanations) , *"even though these (similar and typical example) aren't much specific about how it's actually doing the (decision) process"* (P16), participants' minds automatically made up such a process by themselves by **comparing instances**. Such comparison mainly allow users to **verify AI's decisions** and to calibrate their trust. The common explanation needs in which similar example were selected are:
 
-**1**) To build \[trust\]{style="color: blue"}, especially from a personal and emotional level.
+**1**) To build trust, especially from a personal and emotional level.
 
-_This (\[similar example\]{style="color: orange"}) made me trust on an emotional level. Because I'm thinking, 'Oh really? I am only 33 years old.' Like I probably not going to get diabetes. But then I'm reading about somebody that does (get diabetes), that sounds a lot like me, it kind of emotionally makes me feel like, 'Oh geez, maybe it is accurate.' So this (\[performance\]{style="color: orange"}, \[output\]{style="color: orange"}) is like using my brain, and this one (\[similar example\]{style="color: orange"}) kind of got me in the gut like, 'Oh, okay. This could actually happen to me. It happened to this person who sounds a lot like me.' "_ (P16, Health, \[Trust\]{style="color: blue"}).
+_This (similar example) made me trust on an emotional level. Because I'm thinking, 'Oh really? I am only 33 years old.' Like I probably not going to get diabetes. But then I'm reading about somebody that does (get diabetes), that sounds a lot like me, it kind of emotionally makes me feel like, 'Oh geez, maybe it is accurate.' So this (performance, output) is like using my brain, and this one (similar example) kind of got me in the gut like, 'Oh, okay. This could actually happen to me. It happened to this person who sounds a lot like me.' "_ (P16, Health, Trust).
 
 **2**) To verify the decision quality of AI.
 
 *"It's like a proof for my final decision."* (P30)
 
-*"Because AI has only 85% accuracy, I want to see similar ones, and what AI thinks they are. "* (P14, Bird, \[Trust\]{style="color: blue"})
+*"Because AI has only 85% accuracy, I want to see similar ones, and what AI thinks they are. "* (P14, Bird, Trust)
 
-*"If it doesn't align (with my prediction), then I want to see some similar houses to remake the judgment."*(P04, House, \[Unexpected\]{style="color: blue"}).
+*"If it doesn't align (with my prediction), then I want to see some similar houses to remake the judgment."*(P04, House, Unexpected).
 
-**3**) To assess the level of disagreement when AI made an \[unexpected\]{style="color: blue"} prediction, and to reveal potential flaws of AI.
+**3**) To assess the level of disagreement when AI made an unexpected prediction, and to reveal potential flaws of AI.
 
-*"If my prediction appears in \[similar example\]{style="color: orange"}, it allows me to judge whether AI is completely unreliable or just need some improvement"* (P01, Bird, \[Unexpected\]{style="color: blue"}).
+*"If my prediction appears in similar example, it allows me to judge whether AI is completely unreliable or just need some improvement"* (P01, Bird, Unexpected).
 
 ### **Cons**
 
 Showing examples for comparison may not be applicable when input data is incomprehensible or **difficult to read and compare**.
 
-*"I think (\[similar \]{style="color: orange"} and \[typical example\]{style="color: orange"}) it's not important to me. Because I need to read other people's status, read their records."* (P02, Health, \[Trust\]{style="color: blue"})
+*"I think (similar  and typical example) it's not important to me. Because I need to read other people's status, read their records."* (P02, Health, Trust)
 
-In addition, participants easily got confused when instances in \[similar example\]{style="color: orange"} have **divergent predictions**. This problem might be solved by \[typical example\]{style="color: orange"} which is stated in Section [1.5](#te){reference-type="ref" reference="te"}.
+In addition, participants easily got confused when instances in similar example have **divergent predictions**. This problem might be solved by typical example which is stated in Section [1.5](#te){reference-type="ref" reference="te"}.
 
-*"(\[similar example\]{style="color: orange"}) It's not really telling you if it (the input) is the one (prediction), so it could be this (prediction) or this or this \[pointing to different predictions on \[similar example\]{style="color: orange"} card\]."* (P26, Bird, \[Trust\]{style="color: blue"})
+*"(similar example) It's not really telling you if it (the input) is the one (prediction), so it could be this (prediction) or this or this pointing to different predictions on similar example card."* (P26, Bird, Trust)
 
-*"This one (\[similar example\]{style="color: orange"}) has too many choices (predictions), it's too confusing."*(P05, Bird, \[Trust\]{style="color: blue"})
+*"This one (similar example) has too many choices (predictions), it's too confusing."*(P05, Bird, Trust)
 
 ### **Design Implications**
 
-As mentioned above, participants had to compare the features in \[similar example\]{style="color: orange"} by themselves. It's important for the XAI system to support such **side-by-side feature-based comparison** among instances such as \[input\]{style="color: orange"}, \[similar\]{style="color: orange"}, \[typical\]{style="color: orange"}, or \[counterfactual example\]{style="color: orange"}, especially when the input data format is difficult to read through.
+As mentioned above, participants had to compare the features in similar example by themselves. It's important for the XAI system to support such **side-by-side feature-based comparison** among instances such as input, similar, typical, or counterfactual example, especially when the input data format is difficult to read through.
 
-*"I don't want to read the text (in \[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"}), it is better to show those features and examples in a table for me to compare directly, also highlight the important features as an analysis process."* (P29, Health, \[Trust\]{style="color: blue"})
+*"I don't want to read the text (in similar and typical example), it is better to show those features and examples in a table for me to compare directly, also highlight the important features as an analysis process."* (P29, Health, Trust)
 
-*" Maybe it could help the doctor to pinpoint things that are similar or different between these cases."*(P31, Health, \[Communication\]{style="color: blue"})
+*" Maybe it could help the doctor to pinpoint things that are similar or different between these cases."*(P31, Health, Communication)
 
-*"I would like a comparison. That's my own house (\[input\]{style="color: orange"}), which probably will be off the top somewhere. And I'm comparing it with other information (\[typical example\]{style="color: orange"} and \[counterfactual example\]{style="color: orange"}). So in a column, and I can compare it. For the layout, maybe you can do a product comparison."* (P03, House, \[Expected\]{style="color: blue"})
+*"I would like a comparison. That's my own house (input), which probably will be off the top somewhere. And I'm comparing it with other information (typical example and counterfactual example). So in a column, and I can compare it. For the layout, maybe you can do a product comparison."* (P03, House, Expected)
 
 ## <a name="te"></a> 2.2 Typical example
 
@@ -253,33 +252,33 @@ A typical or prototypical example is a representative instance for a certain pre
 For similar and typical examples, it is straightforward to show several the examples with their corresponding predictions.
 
 ### Pros
-One drawback of \[similar example\]{style="color: orange"} is that it may make users confused about similar instances. \[Typical example\]{style="color: orange"} may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of \[similar example\]{style="color: orange"}.
+One drawback of similar example is that it may make users confused about similar instances. Typical example may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of similar example.
 
-*"(\[typical example\]{style="color: orange"}) You actually made a category of each one. I remember in cognitive psychology, there's a theory. I don't remember the name, but if you clearly separate each category, that helps people to differentiate the different categories, then remember. But for this one (\[similar example\]{style="color: orange"}), you have to read every one (instance) of them."* (P04, Bird, \[Learning\]{style="color: blue"})
+*"(typical example) You actually made a category of each one. I remember in cognitive psychology, there's a theory. I don't remember the name, but if you clearly separate each category, that helps people to differentiate the different categories, then remember. But for this one (similar example), you have to read every one (instance) of them."* (P04, Bird, Learning)
 
 ### Cons
 
-In our study, most participants regarded both \[similar example\]{style="color: orange"} and \[typical example\]{style="color: orange"} as similar examples. Only a few participants got the idea of \[typical example\]{style="color: orange"} that *"you're getting the average"* (P20). Thus in this section, we state the themes on \[similar example\]{style="color: orange"} as well as the common themes of \[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"}.
+In our study, most participants regarded both similar example and typical example as similar examples. Only a few participants got the idea of typical example that *"you're getting the average"* (P20). Thus in this section, we state the themes on similar example as well as the common themes of similar and typical example.
 
 ### **Applicable Explanation Needs**
 
-Since \[typical example\]{style="color: orange"} represents the typical case for the outcome, it may help to reveal class-specific characteristics or even potential problems in the AI model or data, for example to **\[reveal bias\]{style="color: blue"}**.
+Since typical example represents the typical case for the outcome, it may help to reveal class-specific characteristics or even potential problems in the AI model or data, for example to **reveal bias**.
 
-*"If I'm concerned about what group the data is coming from, I would love if the typical case like the average that comes up says like, male, this age, and the factors were quite different from mine, then I kinda go, 'huh?' But if it could give me a typical case that's actually quite similar to me, then I would be less worried about it not performing well with my group."* (P22, Health, \[Bias\]{style="color: blue"})
+*"If I'm concerned about what group the data is coming from, I would love if the typical case like the average that comes up says like, male, this age, and the factors were quite different from mine, then I kinda go, 'huh?' But if it could give me a typical case that's actually quite similar to me, then I would be less worried about it not performing well with my group."* (P22, Health, Bias)
 
-Unfortunately, most participants did not realize the meaning of \[typical example\]{style="color: orange"} and did not make use of such "debugging'' property.
+Unfortunately, most participants did not realize the meaning of typical example and did not make use of such "debugging'' property.
 
 ### **Design Implications**
 
-In addition to show \[typical example\]{style="color: orange"} of different predictions (between-class variation), in some cases, it might be beneficial to show **different variations of \[typical example\]{style="color: orange"}** for a particular prediction (within-class variation).
+In addition to show typical example of different predictions (between-class variation), in some cases, it might be beneficial to show **different variations of typical example** for a particular prediction (within-class variation).
 
-*"It's showing different pictures of the same bird, and the colors even look different. So it's saying maybe, 'Oh, I get it, we have the male and female.' So it's showing different looks that the bird can have.''* (P06, Bird, \[Learning\]{style="color: blue"})
+*"It's showing different pictures of the same bird, and the colors even look different. So it's saying maybe, 'Oh, I get it, we have the male and female.' So it's showing different looks that the bird can have.''* (P06, Bird, Learning)
 
-Opposite to \[typical example\]{style="color: orange"}, some participants expected to see non-typical or edge cases that represent rare but severe consequences, mainly due to safety and bias concerns.
+Opposite to typical example, some participants expected to see non-typical or edge cases that represent rare but severe consequences, mainly due to safety and bias concerns.
 
-*"So they (\[similar\]{style="color: orange"} and \[typical example\]{style="color: orange"}) don't really provide enough information about when the weather is different and when you're driving at night, the results from non-typical conditions."* (P27, Car, \[Bias\]{style="color: blue"})
+*"So they (similar and typical example) don't really provide enough information about when the weather is different and when you're driving at night, the results from non-typical conditions."* (P27, Car, Bias)
 
-*"I still don't know if the dog jumps out of nowhere. so maybe the (\[similar example\]{style="color: orange"}) similar traffic conditions can see the extreme cases."
+*"I still don't know if the dog jumps out of nowhere. so maybe the (similar example) similar traffic conditions can see the extreme cases."
 
 ## <a name="ce"></a>2.3 Counterfactual example
 
@@ -296,36 +295,36 @@ Counterfactual examples can be shown as two instances with their **counterfactua
 
 ### **Pros and Applicable Explanation Needs**
 
-In our study, \[counterfactual example\]{style="color: orange"} was shown as two instances of different predictions, with their feature differences highlighted while keeping other features the same (Figure [\[fig:teaser\]](#fig:teaser){reference-type="ref" reference="fig:teaser"}). This format can serve for different explanation needs depending on the task context. In predictive tasks (House and Health), participants regarded \[counterfactual example\]{style="color: orange"} as the most direct explanatory form to **suggest an \[improvement\]{style="color: blue"}**.
+In our study, counterfactual example was shown as two instances of different predictions, with their feature differences highlighted while keeping other features the same (Figure [fig:teaser](#fig:teaser){reference-type="ref" reference="fig:teaser"}). This format can serve for different explanation needs depending on the task context. In predictive tasks (House and Health), participants regarded counterfactual example as the most direct explanatory form to **suggest an improvement**.
 
-*"For renovations, I think that's (\[counterfactual example\]{style="color: orange"}) the only card I would choose. The only one that really tells me that I can do something to increase the price."* (P20, House, \[Improvement\]{style="color: blue"})
+*"For renovations, I think that's (counterfactual example) the only card I would choose. The only one that really tells me that I can do something to increase the price."* (P20, House, Improvement)
 
-While in recognition task (Bird), \[counterfactual example\]{style="color: orange"} is suitable to **show the differences** to \[differentiate\]{style="color: blue"} two similar predictions.
+While in recognition task (Bird), counterfactual example is suitable to **show the differences** to differentiate two similar predictions.
 
-*"\[Counterfactual example\]{style="color: orange"} let me learn their relationship, highlight the difference between the two (birds). Help me remember the different features."* (P11, Bird, \[Learning\]{style="color: blue"})
+*"Counterfactual example let me learn their relationship, highlight the difference between the two (birds). Help me remember the different features."* (P11, Bird, Learning)
 
 ### **Cons**
 
-Some participants did not understand the meaning of \[counterfactual example\]{style="color: orange"}, and could not capture the nuance between \[feature attribute\]{style="color: orange"} and \[counterfactual example\]{style="color: orange"}, since they both have features highlighted but for different reasons (\[feature attribute\]{style="color: orange"} highlights important features for prediction, whereas \[counterfactual example\]{style="color: orange"} highlights what features need to change for the alternative outcome to happen).
+Some participants did not understand the meaning of counterfactual example, and could not capture the nuance between feature attribute and counterfactual example, since they both have features highlighted but for different reasons (feature attribute highlights important features for prediction, whereas counterfactual example highlights what features need to change for the alternative outcome to happen).
 
-\[Counterfactual example\]{style="color: orange"} may have the risk to make participants **confused about similar instances**, especially in recognition tasks.
+Counterfactual example may have the risk to make participants **confused about similar instances**, especially in recognition tasks.
 
-*"I think this tool (\[counterfactual example\]{style="color: orange"}) will make me remember the wrong thing. I'm already confused. It shows information that is similar."* (P11, Bird)
+*"I think this tool (counterfactual example) will make me remember the wrong thing. I'm already confused. It shows information that is similar."* (P11, Bird)
 
-Thus it may not be the beginning explanations and may only show up on-demand, for example, for the two explanation needs of \[improvement\]{style="color: blue"} and \[differentiation\]{style="color: blue"} mentioned above.
+Thus it may not be the beginning explanations and may only show up on-demand, for example, for the two explanation needs of improvement and differentiation mentioned above.
 
 ### **Design Implications**
 
-The two **contrastive outcomes in \[counterfactual example\]{style="color: orange"} can be user-defined or pre-generated** depending on the specific explanation needs. One outcome is usually from user's current instance such as input, and the alternative outcome can be: *"the next possible prediction"* (P18, Bird, \[Report\]{style="color: blue"}), users' own prediction when there's a disagreement (\[Unexpected\]{style="color: blue"}), the prospective outcome for \[improvement\]{style="color: blue"}, and the easily confused outcome for \[differentiation\]{style="color: blue"}.
+The two **contrastive outcomes in counterfactual example can be user-defined or pre-generated** depending on the specific explanation needs. One outcome is usually from user's current instance such as input, and the alternative outcome can be: *"the next possible prediction"* (P18, Bird, Report), users' own prediction when there's a disagreement (Unexpected), the prospective outcome for improvement, and the easily confused outcome for differentiation.
 
-The generating of counterfactual features may also receive user-defined or pre-defined constraints, such as: **1**) constraints on the counterfactual feature type to include **controllable features only** (see Section [2.8](#control){reference-type="ref" reference="control"} \[Improvement\]{style="color: blue"} on controllable features); **2**) generate **personalized counterfactual suggestions** based on features that users look upon: *"the recommendation should be a lot based on what I do"* (P24, Health); and **3**) constraints on the range of specific counterfactual features: *"AI should accept my personalized constraints on budget* (P01, House, \[Improvement\]{style="color: blue"}). Given these constraints, the XAI system can also provide multiple improvement suggestions for users to choose from (P01, P11), and may give weights or relative ranking on multiple suggestions.
+The generating of counterfactual features may also receive user-defined or pre-defined constraints, such as: **1**) constraints on the counterfactual feature type to include **controllable features only** (see Section [2.8](#control){reference-type="ref" reference="control"} Improvement on controllable features); **2**) generate **personalized counterfactual suggestions** based on features that users look upon: *"the recommendation should be a lot based on what I do"* (P24, Health); and **3**) constraints on the range of specific counterfactual features: *"AI should accept my personalized constraints on budget* (P01, House, Improvement). Given these constraints, the XAI system can also provide multiple improvement suggestions for users to choose from (P01, P11), and may give weights or relative ranking on multiple suggestions.
 
 ---
 
 # <a name="rule"></a> 3. Rule-based explanation
 Rule-based explanations are explanations where decisions of the model, in whole or in part, can be described succinctly by a set of logical if/else statements, mimicking human reasoning and decision making. It also implies the decision boundary thus may be convenient for counterfactual reasoning. The rule-based explanation is a global explanation of the model's overall behavior. It includes the following explanatory forms. We note rule and decision tree actually carry out similar explanation information. But since they are usually generated by different XAI algorithms, and their representation format (text vs. diagram) are distinct to the end-users, we separate the two explanatory forms.
 
-Many participants noticed the three formats of rule-based explanations (\[rule\]{style="color: orange"}, \[decision tree\]{style="color: orange"}) provided *"basically the same information"* (P02, Health), *"all show the decision process"* (P10, Bird), and were only different in the text (\[rule\]{style="color: orange"}) or graphical (\[decision tree\]{style="color: orange"}) representation.
+Many participants noticed the three formats of rule-based explanations (rule, decision tree) provided *"basically the same information"* (P02, Health), *"all show the decision process"* (P10, Bird), and were only different in the text (rule) or graphical (decision tree) representation.
 
 ## <a name="rl"></a>3.1 Rule text
 
@@ -336,7 +335,7 @@ The decision rules or decision sets are simple IF-THEN statement with condition 
 ![Decision_rule](prototyping/Rule.png)
 
 
-Rules are usually represented using **text**. Other representing formats include table @Castro2019\] or matrix @Ming2019\] to easily align and compare rule clauses.
+Rules are usually represented using **text**. Other representing formats include table @Castro2019 or matrix @Ming2019 to easily align and compare rule clauses.
 
 ### **Pros**
 
@@ -564,7 +563,7 @@ example, counterfactual example, input; **Cluster 4**: feature shape,
 feature interaction. ](figures/sim_2021.pdf){width="70%"}
 
 \Description{}
-[\[fig:sim\]]{#fig:sim label="fig:sim"}
+[fig:sim]{#fig:sim label="fig:sim"}
 
 
 
@@ -600,7 +599,7 @@ example-bases explanatory forms ([similar]{style="color: orange"},
 example]{style="color: orange"}) for comparison. Quantitative results
 led to the same findings, as [input]{style="color: orange"} was
 clustered together with other example-based explanatory forms
-(Figure [\[fig:sim\]](#fig:sim){reference-type="ref"
+(Figure [fig:sim](#fig:sim){reference-type="ref"
 reference="fig:sim"}, Supplementary Material S2 Figure ??).
 
 ## <a name="output"></a> 4.2 Output
@@ -619,7 +618,7 @@ In our study, the [output]{style="color: orange"} card contained
 prediction information of a point prediction, a prediction range, and
 their corresponding uncertainty level (for regression tasks); Or top
 three predictions and their likelihood (for classification tasks)
-(Fig [\[fig:teaser\]](#fig:teaser){reference-type="ref"
+(Fig [fig:teaser](#fig:teaser){reference-type="ref"
 reference="fig:teaser"}). For the output information presentation, some
 participants preferred to check the point prediction at the beginning,
 and check the detailed prediction range and uncertainty level on-demand

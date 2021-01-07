@@ -15,25 +15,25 @@
         <h1><a href="https://weina.me/end-user-xai">{{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <div>
+        <table>
           
-              <h3><a href="https://weina.me/end-user-xai">EUCA Homepage</a></h3>
-              <h3><a href="explanatory_form.html">End-User-Friendly Explanatory Forms</a></h3>
-                   <h4><a href="explanatory_form.html#feature">Feature-based explanation</a></h4>
+          <tr><th><a href="https://weina.me/end-user-xai">EUCA Homepage</a></th></tr>
+              <tr><th><a href="explanatory_form.html">End-User-Friendly Explanatory Forms</a><tr><th>
+                  <tr><a href="explanatory_form.html#feature">Feature-based explanation</a>
                     <ul>
                       <li><a href="explanatory_form.html#fa">Feature Attribute</a></li>
                       <li><a href="explanatory_form.html#fs">Feature Shape</a></li>
                       <li><a href="explanatory_form.html#fi">Feature Interation</a></li>
-                    </ul>
-                    <h4><a href="explanatory_form.html#example">Example-based explanation</a></h4>
+                    </ul></tr>
+                    <tr><a href="explanatory_form.html#example">Example-based explanation</a>
                     <ul>
                       <li><a href="explanatory_form.html#se">Similar Example</a></li>
                       <li><a href="explanatory_form.html#te">Typical Example</a></li>
                       <li><a href="explanatory_form.html#ce">Counterfactual example</a></li>
-                    </ul>
-              <h3><a href="need.html">Explanation Needs</a></h3>
+                    </ul></tr>
+              <tr><th><a href="need.html">Explanation Needs</a><tr><th>
 
-        </div>
+        </table>
 
         {% if site.show_downloads %}
           <ul>

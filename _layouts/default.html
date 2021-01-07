@@ -24,7 +24,21 @@
             {% endif %}
           {% endfor %}
         </table>
+<ul>
 
+  {% for item in include.nav %}
+
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+
+    {% if item.subnav %}
+
+      {% include nav.html nav=item.subnav %}
+
+    {% endif %}
+
+  {% endfor %}
+
+</ul>
         {% if site.show_downloads %}
           <ul>
             <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>

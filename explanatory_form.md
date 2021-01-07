@@ -34,8 +34,6 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  | **Applicable needs**
  | **XAI algorithms** |
 |---|---|---|---|---|---|---|
-
-
 |**Feature Attribute**
  | Local/Global
  | Tabular/Img/Txt
@@ -43,7 +41,6 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  |  Illusion of causality, confirmation bias
  |  To verify AI's decision
  | [LIME ](Ribeiro2016a), [SHAP](Lundberg), [CAM](Zhoub), [LRP](Bach2015), [TCAV](Kim)   |
-
 |**Feature Shape**
  | Global
  | Tabular 
@@ -51,7 +48,6 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  | Lacks feature interaction; Information overload if multiple feature shapes are presented
  |  To control and improve the outcome; To reveal bias
  | [PDP](Friedman2001), [ALE](Apley2016), [GAM](Tan) |
-
 |**Feature Interaction**
  |  Global
  | Tabular
@@ -59,7 +55,6 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  |  The diagram on multiple features is difficult to interpret
  |  To control and improve the outcome
  |  [PDP](Friedman2001), [ALE](Apley2016), [GA2M](Caruana2015) |
-
 |**Similar Example**
  |Local
  | Tabular/Img/Txt
@@ -67,7 +62,6 @@ We identify end-user-friendly explanatory forms from technical literature. By en
  |  It does not highlight features within examples to enable users’ side-by-side comparison
  |  To verify the decision 
  |  Nearest neighbour, [CBR ](Kolodner1992)  |
-
 |**Typical Example**
  | Local/Global
  | Tabular/Img/Txt
@@ -76,7 +70,6 @@ Reveal potential problems of the model
  |  Users may not appreciate the idea of typical cases
  |   To verify the decision; To reveal bias
  | k-Mediods, [MMD-critic ](Kim2016),  [Generate prototype ](Simonyan, Mahendran2014a), [CNN prototype](Lia, Chen) |
-
 |**Counterfactual Example**
  | Local
  | Tabular/Img/Txt
@@ -87,11 +80,7 @@ To control and improve the outcome
  | [Inverse classification](10.1007/978-3-319-91473-2_9), [MMD-critic](Kim2016), 
 [Influential instance](WeiKoh2017),
 [Progression](Kawaharaa), [Visual](Goyal)
-, [Pertinent Negative](Dhurandhar)
- |
-
-
-
+, [Pertinent Negative](Dhurandhar) |
 |**Decision Rules/Sets**
  | Global
  | Tabular/Img/Txt
@@ -99,7 +88,6 @@ To control and improve the outcome
  |  Need to carefully balance between completeness and simplicity of explanation
  |  Facilitate users' learning, report generation, and communication with other stakeholders
  | [Bayesian Rule Lists](Yang2017), [LORE](Guidotti2018c), [Anchors](Ribeiro)  |
-
 |**Decision tree**
  | Global
  | Tabular/Img/Txt
@@ -108,6 +96,8 @@ To control and improve the outcome
  |  Comparison; Counterfactual reasoning
  | [Model distillation ](Frosst), [Disentangle CNN](Zhang2018d)
 
+---
+**About the user study**
 
 The following findings on the identified pros, cons, desing implications and applicable needs were based on our user study interview and card sorting with 32 layperson participants. The interview was conducted based on 4 AI-assisted decision-making **tasks** trying to reflect the diversity of AI-supported critical decision-making. 
 

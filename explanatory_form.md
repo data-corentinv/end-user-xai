@@ -49,6 +49,40 @@ Its visual representation largely depend on the data type of the features. For i
 
 To visualize multiple feature attributes for tabular or text data, a **bar chart** is typical choice. The variations of bar plot include waterfall plot, treemap, wrapped bars, packed bars, piled bars, Zvinca plots, and tornado plot. _Box plot_ can be used to visualize the distribution of the feature importance score. Its variations include violin plot and beeswarm plot that show more detailed data distribution and skewness.
 
+
+### Pros
+
+Users can **intuitively understood** feature attribute, and would likely accept it as an explanation.
+
+>*" It uses a simple way to highlight the most important parts, and you can see very clearly at your first sight how this can be recognized."* 
+> *"It's easy to read. ...And you have a bar (chart) here it's really clear information that people understand instantly."*
+
+By showing *"finer details"* (P10) and *"breakdown and weights of features"_(P23) *"that AI took into account"_ (P31), participants perceived \[feature attribute\]{style="color: orange"} **can answer *"how"* and *"why"* questions**.
+
+*"tells me why"_(P20), *"gives me the behind the scenes"_ (P24), *"tells me how AI read things and how it makes decisions"* (P03), *"have an understanding of how much weight AI is giving to each of the factors"* (P22), and *"identify key aspect, ...support its reasoning"* (P18).
+
+### **Applicable Explanation Needs**
+
+By checking feature importance ranking, participants would instantly *"compare with my own judgment, to see if that aligns with my feature attribute"* (P01, Car, \[Safety\]{style="color: blue"}), especially when participants need to **verify AI's decision**.
+
+### **Cons**
+
+Although a causal relationship may not be confirmed, some participants tended to **assume \[feature attribute\]{style="color: orange"} is causal**, or simplify the relationship among features by assuming they are **independent from each other**. This was usually occurred when they were seeking explanation to \[improve the predicted outcome\]{style="color: blue"}. And participants were likely to be informed by the feature importance score to prioritize the most important features to take actions upon.
+
+*"Seeing that body weight is more important than exercise, I think I will focus on changing what I ate, instead of like responding by going to the gym everyday."* (P16, Health, \[Improvement\]{style="color: blue"}) -- Relies on \[feature attribute\]{style="color: orange"} to improve the outcome.
+
+*"It (\[feature attribute\]{style="color: orange"}) shows what are the most important factors that AI has taken into account, so you could target the biggest factors."* (P31, Health, \[Improvement\]{style="color: blue"}) -- Assumes a causal relationship and prioritizes the action.
+
+*"If my blood sugar puts me at a super high risk here, but my caloric intake doesn't actually put me at that higher risk, it's like a lower risk, then I would rather just focus on blood sugar. "* (P22, Health task) -- Ignores the complex interaction between blood sugar and caloric intake.
+
+### **Design Implications**
+
+To avoid the above causal illusion, UI/UX design may need to **alarm users** either implicitly or explicitly that changing the important features may not necessarily lead to the outcome change in the real world, due to correlation does not necessarily imply causality.
+
+For designing UI/UX of its prototyping card, designers may consider **varying different representations** of the feature importance, such as showing the feature ranking only and allowing users to check the detailed attribute scores on demand, or allowing users to set a threshold on the attribute score and only showing features above the cut-off value, as suggested by a few participants.
+
+*"If the percentage (of the feature) is below the cutoff value, the users does not need to see (the feature), reduce the cognitive load."* (P04, Bird, \[Learning\]{style="color: blue"})
+
 ## <a name="fs"></a> 1.2 Feature Shape
 
 

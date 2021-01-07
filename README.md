@@ -153,10 +153,11 @@ You can create your own or even draw your explanatory cards on paper.  We provid
 
 ---
 
-# <a name="share"></a> I used EUCA and I want to share my XAI design
+# <a name="share"></a> Contributions from the Community are highly encouraged!
 
 You can inspire other designers by sharing your sketches, designs and prototypes using EUCA. We will post your design on the EUCA page.
 
-To share your design, please feel free to contact weinaj at sfu dot ca, or open a pull request on the [EUCA project repo](https://github.com/weinajin/end-user-xai).
+To share your design and input, report a typo, error, or outdated information, please feel free to contact weinaj at sfu dot ca, or open a pull request on the [EUCA project repo](https://github.com/weinajin/end-user-xai).
+
 
 

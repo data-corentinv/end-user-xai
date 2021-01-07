@@ -189,57 +189,59 @@ Human uses examples to learn and explain. Examples carry contextual information 
 ## <a name="se"></a>2.1 Similar example
 
 Similar examples are instances that are similar to the input data regarding their features in the feature space.
+
 ![Similar_example](prototyping/Similar_example.png)
 
 ### **Pros**
 
 Participants **intuitively understood** the concept of similar example. Similar example uses analogical reasoning to facilitate to the sense-making process.
 
-*"It just intuitively makes sense to me. ...similar and typical example are much easier. I don't have to think about them before figuring it out."* (P16, Bird, Trust)
+> *"It just intuitively makes sense to me. ...similar and typical example are much easier. I don't have to think about them before figuring it out."* 
 
-*"(similar and typical example) It's similar to how humans make decisions, like we compare similar images to the original (input) one."* (P02, Bird, Trust)
+> *"(similar and typical example) It's similar to how humans make decisions, like we compare similar images to the original (input) one."* 
 
 ### **Applicable Explanation Needs**
 
-Unlike other explanatory forms that reveal AI's decision-making process (such as rule-based explanations) , *"even though these (similar and typical example) aren't much specific about how it's actually doing the (decision) process"* (P16), participants' minds automatically made up such a process by themselves by **comparing instances**. Such comparison mainly allow users to **verify AI's decisions** and to calibrate their trust. The common explanation needs in which similar example were selected are:
+Unlike other explanatory forms that reveal AI's decision-making process (such as rule-based explanations) , *"even though these (similar and typical example) aren't much specific about how it's actually doing the (decision) process"* , participants' minds automatically made up such a process by themselves by **comparing instances**. Such comparison mainly allow users to **verify AI's decisions** and to calibrate their trust. The common explanation needs in which similar example were selected are:
 
 **1**) To build trust, especially from a personal and emotional level.
 
-_This (similar example) made me trust on an emotional level. Because I'm thinking, 'Oh really? I am only 33 years old.' Like I probably not going to get diabetes. But then I'm reading about somebody that does (get diabetes), that sounds a lot like me, it kind of emotionally makes me feel like, 'Oh geez, maybe it is accurate.' So this (performance, output) is like using my brain, and this one (similar example) kind of got me in the gut like, 'Oh, okay. This could actually happen to me. It happened to this person who sounds a lot like me.' "_ (P16, Health, Trust).
+> _This (similar example) made me trust on an emotional level. Because I'm thinking, 'Oh really? I am only 33 years old.' Like I probably not going to get diabetes. But then I'm reading about somebody that does (get diabetes), that sounds a lot like me, it kind of emotionally makes me feel like, 'Oh geez, maybe it is accurate.' So this (performance, output) is like using my brain, and this one (similar example) kind of got me in the gut like, 'Oh, okay. This could actually happen to me. It happened to this person who sounds a lot like me.' "_ 
 
 **2**) To verify the decision quality of AI.
 
-*"It's like a proof for my final decision."* (P30)
+> *"It's like a proof for my final decision."* 
 
-*"Because AI has only 85% accuracy, I want to see similar ones, and what AI thinks they are. "* (P14, Bird, Trust)
+> *"Because AI has only 85% accuracy, I want to see similar ones, and what AI thinks they are. "* 
 
-*"If it doesn't align (with my prediction), then I want to see some similar houses to remake the judgment."*(P04, House, Unexpected).
+> *"If it doesn't align (with my prediction), then I want to see some similar houses to remake the judgment."*
 
 **3**) To assess the level of disagreement when AI made an unexpected prediction, and to reveal potential flaws of AI.
 
-*"If my prediction appears in similar example, it allows me to judge whether AI is completely unreliable or just need some improvement"* (P01, Bird, Unexpected).
+> *"If my prediction appears in similar example, it allows me to judge whether AI is completely unreliable or just need some improvement."* 
 
 ### **Cons**
 
 Showing examples for comparison may not be applicable when input data is incomprehensible or **difficult to read and compare**.
 
-*"I think (similar  and typical example) it's not important to me. Because I need to read other people's status, read their records."* (P02, Health, Trust)
+> *"I think (similar  and typical example) it's not important to me. Because I need to read other people's status, read their records."* 
 
-In addition, participants easily got confused when instances in similar example have **divergent predictions**. This problem might be solved by typical example which is stated in Section [1.5](#te){reference-type="ref" reference="te"}.
+In addition, participants easily got confused when instances in similar example have **divergent predictions**. This problem might be solved by [typical example](#te).
 
-*"(similar example) It's not really telling you if it (the input) is the one (prediction), so it could be this (prediction) or this or this pointing to different predictions on similar example card."* (P26, Bird, Trust)
+> *"(similar example) It's not really telling you if it (the input) is the one (prediction), so it could be this (prediction) or this or this pointing to different predictions on similar example card."* 
 
-*"This one (similar example) has too many choices (predictions), it's too confusing."*(P05, Bird, Trust)
+> *"This one (similar example) has too many choices (predictions), it's too confusing."*
 
 ### **Design Implications**
 
 As mentioned above, participants had to compare the features in similar example by themselves. It's important for the XAI system to support such **side-by-side feature-based comparison** among instances such as input, similar, typical, or counterfactual example, especially when the input data format is difficult to read through.
 
-*"I don't want to read the text (in similar and typical example), it is better to show those features and examples in a table for me to compare directly, also highlight the important features as an analysis process."* (P29, Health, Trust)
+> *"I don't want to read the text (in similar and typical example), it is better to show those features and examples in a table for me to compare directly, also highlight the important features as an analysis process."* 
 
-*" Maybe it could help the doctor to pinpoint things that are similar or different between these cases."*(P31, Health, Communication)
+> *" Maybe it could help the doctor to pinpoint things that are similar or different between these cases."*
 
-*"I would like a comparison. That's my own house (input), which probably will be off the top somewhere. And I'm comparing it with other information (typical example and counterfactual example). So in a column, and I can compare it. For the layout, maybe you can do a product comparison."* (P03, House, Expected)
+> *"I would like a comparison. That's my own house (input), which probably will be off the top somewhere. And I'm comparing it with other information (typical example and counterfactual example). So in a column, and I can compare it. For the layout, maybe you can do a product comparison."* 
+
 
 ## <a name="te"></a> 2.2 Typical example
 
@@ -252,19 +254,19 @@ A typical or prototypical example is a representative instance for a certain pre
 For similar and typical examples, it is straightforward to show several the examples with their corresponding predictions.
 
 ### Pros
-One drawback of similar example is that it may make users confused about similar instances. Typical example may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of similar example.
+One drawback of [similar example](#se) is that it may make users confused about similar instances. Typical example may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of similar example.
 
-*"(typical example) You actually made a category of each one. I remember in cognitive psychology, there's a theory. I don't remember the name, but if you clearly separate each category, that helps people to differentiate the different categories, then remember. But for this one (similar example), you have to read every one (instance) of them."* (P04, Bird, Learning)
+> *"(typical example) You actually made a category of each one. I remember in cognitive psychology, there's a theory. I don't remember the name, but if you clearly separate each category, that helps people to differentiate the different categories, then remember. But for this one (similar example), you have to read every one (instance) of them."* 
 
 ### Cons
 
-In our study, most participants regarded both similar example and typical example as similar examples. Only a few participants got the idea of typical example that *"you're getting the average"* (P20). Thus in this section, we state the themes on similar example as well as the common themes of similar and typical example.
+Users may not capture the "typical" or "prototypical" idea at a glance. In our study, most participants regarded both similar example and typical example as similar examples. Only a few participants got the idea of typical example that *"you're getting the average"*.
 
 ### **Applicable Explanation Needs**
 
 Since typical example represents the typical case for the outcome, it may help to reveal class-specific characteristics or even potential problems in the AI model or data, for example to **reveal bias**.
 
-*"If I'm concerned about what group the data is coming from, I would love if the typical case like the average that comes up says like, male, this age, and the factors were quite different from mine, then I kinda go, 'huh?' But if it could give me a typical case that's actually quite similar to me, then I would be less worried about it not performing well with my group."* (P22, Health, Bias)
+> *"If I'm concerned about what group the data is coming from, I would love if the typical case like the average that comes up says like, male, this age, and the factors were quite different from mine, then I kinda go, 'huh?' But if it could give me a typical case that's actually quite similar to me, then I would be less worried about it not performing well with my group."* 
 
 Unfortunately, most participants did not realize the meaning of typical example and did not make use of such "debugging'' property.
 
@@ -272,13 +274,13 @@ Unfortunately, most participants did not realize the meaning of typical example 
 
 In addition to show typical example of different predictions (between-class variation), in some cases, it might be beneficial to show **different variations of typical example** for a particular prediction (within-class variation).
 
-*"It's showing different pictures of the same bird, and the colors even look different. So it's saying maybe, 'Oh, I get it, we have the male and female.' So it's showing different looks that the bird can have.''* (P06, Bird, Learning)
+> *"It's showing different pictures of the same bird, and the colors even look different. So it's saying maybe, 'Oh, I get it, we have the male and female.' So it's showing different looks that the bird can have.''* 
 
 Opposite to typical example, some participants expected to see non-typical or edge cases that represent rare but severe consequences, mainly due to safety and bias concerns.
 
-*"So they (similar and typical example) don't really provide enough information about when the weather is different and when you're driving at night, the results from non-typical conditions."* (P27, Car, Bias)
+> *"So they (similar and typical example) don't really provide enough information about when the weather is different and when you're driving at night, the results from non-typical conditions."* 
 
-*"I still don't know if the dog jumps out of nowhere. so maybe the (similar example) similar traffic conditions can see the extreme cases."
+> *"I still don't know if the dog jumps out of nowhere. so maybe the (similar example) similar traffic conditions can see the extreme cases."
 
 ## <a name="ce"></a>2.3 Counterfactual example
 
@@ -295,13 +297,13 @@ Counterfactual examples can be shown as two instances with their **counterfactua
 
 ### **Pros and Applicable Explanation Needs**
 
-In our study, counterfactual example was shown as two instances of different predictions, with their feature differences highlighted while keeping other features the same (Figure [fig:teaser](#fig:teaser){reference-type="ref" reference="fig:teaser"}). This format can serve for different explanation needs depending on the task context. In predictive tasks (House and Health), participants regarded counterfactual example as the most direct explanatory form to **suggest an improvement**.
+In our study, counterfactual example was shown as two instances of different predictions, with their feature differences highlighted while keeping other features the same. This format can serve for different explanation needs depending on the task context. In predictive tasks (House and Health), participants regarded counterfactual example as the most direct explanatory form to **suggest an improvement**.
 
-*"For renovations, I think that's (counterfactual example) the only card I would choose. The only one that really tells me that I can do something to increase the price."* (P20, House, Improvement)
+> *"For renovations, I think that's (counterfactual example) the only card I would choose. The only one that really tells me that I can do something to increase the price."* 
 
 While in recognition task (Bird), counterfactual example is suitable to **show the differences** to differentiate two similar predictions.
 
-*"Counterfactual example let me learn their relationship, highlight the difference between the two (birds). Help me remember the different features."* (P11, Bird, Learning)
+> *"Counterfactual example let me learn their relationship, highlight the difference between the two (birds). Help me remember the different features."*
 
 ### **Cons**
 
@@ -309,7 +311,7 @@ Some participants did not understand the meaning of counterfactual example, and 
 
 Counterfactual example may have the risk to make participants **confused about similar instances**, especially in recognition tasks.
 
-*"I think this tool (counterfactual example) will make me remember the wrong thing. I'm already confused. It shows information that is similar."* (P11, Bird)
+> *"I think this tool (counterfactual example) will make me remember the wrong thing. I'm already confused. It shows information that is similar."* 
 
 Thus it may not be the beginning explanations and may only show up on-demand, for example, for the two explanation needs of improvement and differentiation mentioned above.
 
@@ -317,14 +319,21 @@ Thus it may not be the beginning explanations and may only show up on-demand, fo
 
 The two **contrastive outcomes in counterfactual example can be user-defined or pre-generated** depending on the specific explanation needs. One outcome is usually from user's current instance such as input, and the alternative outcome can be: *"the next possible prediction"* (P18, Bird, Report), users' own prediction when there's a disagreement (Unexpected), the prospective outcome for improvement, and the easily confused outcome for differentiation.
 
-The generating of counterfactual features may also receive user-defined or pre-defined constraints, such as: **1**) constraints on the counterfactual feature type to include **controllable features only** (see Section [2.8](#control){reference-type="ref" reference="control"} Improvement on controllable features); **2**) generate **personalized counterfactual suggestions** based on features that users look upon: *"the recommendation should be a lot based on what I do"* (P24, Health); and **3**) constraints on the range of specific counterfactual features: *"AI should accept my personalized constraints on budget* (P01, House, Improvement). Given these constraints, the XAI system can also provide multiple improvement suggestions for users to choose from (P01, P11), and may give weights or relative ranking on multiple suggestions.
+The generating of counterfactual features may also receive user-defined or pre-defined constraints, such as: 
+* **1**) constraints on the counterfactual feature type to include **controllable features only** (see [Improvement on controllable features](need.md#control); 
+
+* **2**) generate **personalized counterfactual suggestions** based on features that users look upon: *"the recommendation should be a lot based on what I do"*; 
+
+* **3**) constraints on the range of specific counterfactual features: *"AI should accept my personalized constraints on budget* . 
+
+Given these constraints, the XAI system can also provide multiple improvement suggestions for users to choose from, and may give weights or relative ranking on multiple suggestions.
 
 ---
 
 # <a name="rule"></a> 3. Rule-based explanation
-Rule-based explanations are explanations where decisions of the model, in whole or in part, can be described succinctly by a set of logical if/else statements, mimicking human reasoning and decision making. It also implies the decision boundary thus may be convenient for counterfactual reasoning. The rule-based explanation is a global explanation of the model's overall behavior. It includes the following explanatory forms. We note rule and decision tree actually carry out similar explanation information. But since they are usually generated by different XAI algorithms, and their representation format (text vs. diagram) are distinct to the end-users, we separate the two explanatory forms.
+Rule-based explanations are explanations where decisions of the model, in whole or in part, can be described succinctly by a set of logical if/else statements, mimicking human reasoning and decision making. It also implies the decision boundary thus may be convenient for counterfactual reasoning. The rule-based explanation is a global explanation of the model's overall behavior. It includes the following explanatory forms. 
 
-Many participants noticed the three formats of rule-based explanations (rule, decision tree) provided *"basically the same information"* (P02, Health), *"all show the decision process"* (P10, Bird), and were only different in the text (rule) or graphical (decision tree) representation.
+Many participants noticed the different formats of rule-based explanations (rule, decision tree) provided *"basically the same information"*, *"all show the decision process"*, and were only different in the text (rule) or graphical (decision tree) representation.
 
 ## <a name="rl"></a>3.1 Rule text
 
@@ -335,7 +344,7 @@ The decision rules or decision sets are simple IF-THEN statement with condition 
 ![Decision_rule](prototyping/Rule.png)
 
 
-Rules are usually represented using **text**. Other representing formats include table @Castro2019 or matrix @Ming2019 to easily align and compare rule clauses.
+Rules are usually represented using **text**. Other representing formats include table [^@Castro2019] or matrix [^@Ming2019] to easily align and compare rule clauses.
 
 ### **Pros**
 
@@ -784,3 +793,6 @@ secret, right?"* (P19, House, [Expected]{style="color: blue"})
 
 [Captum, a pytorch XAI library](https://captum.ai/) 
 
+
+
+[^@Castro2019]: [Surrogate Decision Tree Visualization](http://ceur-ws.org/Vol-2327/IUI19WS-ExSS2019-15.pdf)

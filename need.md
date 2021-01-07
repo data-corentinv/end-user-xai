@@ -1,3 +1,68 @@
+### **End-Users' Explanation Needs** {#purpose}
+
+Even for the same user and task, end-users' needs for explanation, i.e.:
+the trigger point or motivation to check the explanation of an AI
+system, may vary from time to time based on different contexts or usage
+scenarios. In our study, we aim to capture the fine-grained details of
+end-users' requirements in different explanation need scenarios. We
+summarized ten potential [***explanation needs***]{style="color: blue"}
+from prior
+works [@Gregor1999a; @Doshi-Velez2017; @Nunes2017; @Ribera2019] as
+follows:
+
+-   [**Calibrate trust**]{style="color: blue"}: trust is a key to
+    establish human-AI decision-making partnership. Since users can
+    easily distrust or overtrust AI, it is important to calibrate the
+    trust to reflect the capabilities of AI systems
+     [@Turner; @Zhang2020].
+
+-   [**Ensure safety**]{style="color: blue"}: users need to ensure
+    safety of the decision consequences.
+
+-   [**Detect bias**]{style="color: blue"}: users need to ensure the
+    decision is impartial and unbiased.
+
+-   [**Resolve disagreement with AI**]{style="color: blue"}: in our
+    study, we designed two scenarios for the purpose: 1) the AI
+    prediction is [**unexpected**]{style="color: blue"} and there are
+    disagreements between users and AI; and 2) the AI's prediction is
+    [**expected**]{style="color: blue"} and aligns with users'
+    expectations.
+
+-   [**Differentiate similar instances**]{style="color: blue"}: due to
+    the consequences of wrong decisions, users sometimes need to discern
+    similar instances or outcomes. For example, a doctor differentiates
+    whether the diagnosis is a benign or malignant tumor.
+
+-   [**Learn**]{style="color: blue"}: users need to gain knowledge,
+    improve their problem-solving skills, and discover new knowledge
+
+-   [**Improve**]{style="color: blue"}: users seek causal factors to
+    control and improve the predicted outcome.
+
+-   [**Communicate with stakeholders**]{style="color: blue"}: many
+    critical decision-making processes involve multiple stakeholders,
+    and users need to discuss the decision with them.
+
+-   [**Generate reports**]{style="color: blue"}: users need to utilize
+    the explanations to perform particular tasks such as report
+    production. For example, a radiologist generates a medical report on
+    a patient's X-ray image.
+
+-   [**Trade-off multiple objectives**]{style="color: blue"}: AI may be
+    optimized on an incomplete objective while the users seek to fulfill
+    multiple objectives in real-world applications. For example, a
+    doctor needs to ensure a treatment plan is effective as well as has
+    acceptable patient adherence. Ethical and legal requirements may
+    also be included as objectives.
+
+Each task is accompanied by several explanation needs as shown in
+Table [\[tab:interview\]](#tab:interview){reference-type="ref"
+reference="tab:interview"}. The tasks and explanation needs were
+presented in the form of storyboards using graphics and text.
+Supplementary Material S2 details the interview schedule and materials.
+
+
 # RQ2: End-Users' General Requirements under Various Explanation Needs {#rq12}
 
 Although participants may have various motivations to check

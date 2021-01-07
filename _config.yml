@@ -1,13 +1,15 @@
-theme: jekyll-theme-dinky
+theme: jekyll-theme-minimal
 title: "EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework"
 description: A practical prototyping tool to design explainable AI for non-technical end-users.
 author: Weina Jin
 
-navbar-links:
-  EUCA Homepage: "https://weina.me/end-user-xai/"
-  Resources:
-    - End-User-Friendly Explanatory Forms: "/explanatory_form"
-    - Explanation Needs: "/need"
+navigation:
+  - title: EUCA Homepage
+    url: /
+  - title: End-User-Friendly Explanatory Forms
+    url: "explanatory_form.md"
+  - title: Explanation Needs
+    url: "need.md"
 
 
 avatar: "fig/euca_logo.png"

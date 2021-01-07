@@ -3,7 +3,7 @@
 
 The EUCA framework is a **prototyping tool** to design explainable artificial intelligence for non-technical end-users.
 
-It can help you quickly build a low-fidelity explainable AI (XAI) prototype, and implement it as a functional one. 
+It can help you build a low-fidelity explainable AI (XAI) prototypequicklyquickly (without the need to implement), so that you can "trial and error" using the prototype , and implement it as a functional one. 
 
 You can use the prototype at the initial phase for user need assessment, and as a start for your explainable AI system iteration.
 

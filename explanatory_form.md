@@ -1,7 +1,34 @@
 # End-User-Friendly Explanatory Forms
 
-## Feature-based explanation
-### <a name="fa"></a> [Feature attribute](#fa)
+We identify end-user-friendly explanatory forms from technical literature. By end-user-friendly we mean the users are not required to have technical knowledge to understand the explanation.
+
+Index
+
+* [Feature-based explanation](#feature)  
+1. [Feature Attribute](#fa)  
+2. [Feature Shape](#fs)  
+3. [Feature Interaction](#fi)  
+
+ * [Example-based explanation](#example)  
+4. [Similar Example](#se)  
+5. [Typical Example](#te)  
+6. [Counterfactual Example](#ce)  
+
+* [Rule-based explanation](#rule)  
+7. [Rule](#rl)  
+8. [Decision Tree](#dt)  
+
+* [Supplementary information](#suppl)  
+9. [Input](#input)  
+10. [Output](#output)  
+11. [Performance](#perf)  
+12. [Dataset](#data)  
+
+# Feature-based explanation
+
+Feature-based explanations are the most common form of explanation information. We refer _feature_ to a piece of information that is carried out by the input data, where an input can be described in terms of its features, be they learned or designed. For example, a real estate agent can describe a house by its size, location, and age, three descriptive features; The feature of an image can be the individual pixels, a car object highlighted, or an explicit concept of "car". To use features for explanations, the feature representation must be human-interpretable. The feature space is also the cornerstone of other explanatory forms: example-based explanations are instances with similar or contrastive features; and rule-based explanations are features connected by logic and conditional statements. The feature-based explanations consist of three explanatory forms:
+
+## <a name="fa"></a> [Feature attribute](#fa)
 
 ![Feature_attribute](prototyping/Feature_attribute.png)
 

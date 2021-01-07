@@ -1,4 +1,4 @@
-# EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
+d# EUCA: <ins>E</ins>nd-<ins>U</ins>ser-<ins>C</ins>entered Explainable <ins>A</ins>I Framework
 
 
 The EUCA framework is a **prototyping tool** to design explainable artificial intelligence for non-technical end-users.
@@ -139,7 +139,7 @@ We provide the following prototyping materials:
 
 We have the following versions:
 - [Sketch file](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_template.sketch)
-- PDF print version: [template](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template.pdf),   [blank card](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_BlankTemplate.pdf),   [individual cards](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_all.pdf)    
+- PDF print version: [template](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template.pdf),   [blank card](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_BlankTemplate.pdf),   [all templates with individual cards](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_all.pdf)    
 - [PowerPoint (Coming soon)]() 
 - [Google slides (Coming soon)]()
 

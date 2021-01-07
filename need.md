@@ -1124,11 +1124,3 @@ towards end-user-centered XAI, the EUCA framework provides a practical
 prototyping toolkit that supports HCI/AI practitioners and researchers
 to develop end-user-oriented XAI systems.
 
-[^1]: Although the AI community has distinct methods to compute output
-    likelihood and uncertainty level, in our study we used likelihood,
-    confidence and uncertainty interchangeably to avoid participants'
-    confusion.
-
-[^2]: http://weina.me/end-user-xai
-
-[^3]: http://weina.me/end-user-xai

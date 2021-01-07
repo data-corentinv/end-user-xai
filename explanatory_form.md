@@ -344,7 +344,7 @@ The decision rules or decision sets are simple IF-THEN statement with condition 
 ![Decision_rule](prototyping/Rule.png)
 
 
-Rules are usually represented using **text**. Other representing formats include table [^Castro2019] or matrix [^@Ming2019] to easily align and compare rule clauses.
+Rules are usually represented using **text**. Other representing formats include table [^Castro2019] or matrix [^Ming2019] to easily align and compare rule clauses.
 
 ### **Pros**
 
@@ -379,7 +379,7 @@ pictures"* to complement each other.
 Rule is **very sensitive to the degree of
 complexity** in text descriptions, as an increase in rule length or
 number of features will dramatically reduce its simplicity and the above
-advantages [^@Narayanan2018]. However, if the rule clauses are short, the
+advantages [^Narayanan2018]. However, if the rule clauses are short, the
 explanation may not be precise and satisfying as well, as P06 pointed
 out,
 
@@ -396,16 +396,14 @@ the system."* (P09, Car, [Safety)
 
 ### **Design Implications**
 
-To reduce the cognitive load of complex [rule, a
+To reduce the cognitive load of complex rule, a
 few participants suggested **trimming the rules** by only showing the
-shallow level, or only showing rules containing the current input *"just
-show [rule related to my own house features"*
-(P30), then users may query details on demand.
+shallow level, or only showing rules containing the current input,*"just show [rule related to my own house features"*, then users may query details on demand.
 
 To carefully balance between explanation completeness and usability, if
-the full [rule is shown, it's beneficial to
+the full rule is shown, it's beneficial to
 **highlight *local* rule clauses** describing the current instance on
-top of the *global* [rule explanation.
+top of the *global* rule explanation.
 
 
 ## <a name="dt"></a> 3.2 Decision tree
@@ -421,104 +419,98 @@ The most common representation is to use a node-link **tree diagram**. other vis
 
 ### **Pros**
 
-Similar to [rule, participants regarded
-[decision tree as *"the most logical one"* (P20)
-that *"**tells you the decision-making process**"* (P04):
+Similar to rule, participants regarded
+decision tree as *"the most logical one"* 
+that *"**tells you the decision-making process**"* :
 
-*"([decision tree) shows the process of thinking
-with AI, what it's going to do with the information."* (P10)
+> *"(decision tree) shows the process of thinking
+with AI, what it's going to do with the information."* 
 
-*"how the algorithm is working, what the machine is thinking about when
-it's coming up with the prediction."* (P16)
+> *"how the algorithm is working, what the machine is thinking about when
+it's coming up with the prediction."* 
 
 ### **Applicable Explanation Needs**
 
-Participants mentioned an advantage of [decision
-tree is to
-**[differentiate**, possibly due to its unique
+Participants mentioned an advantage of decision
+tree is to **[differentiate**, possibly due to its unique
 tree layout:
 
-*"It explained very well what's the difference between them (the two
-confusing instances)."*(P04, Bird, [Report)
+> *"It explained very well what's the difference between them (the two
+confusing instances)."*
 
-*"It would show you how to pick up the different types of variants."*
-(P10, Bird, [Report)
+> *"It would show you how to pick up the different types of variants."*
 
-*"I think this ([decision tree) is the graphic
+
+> *"I think this ([decision tree) is the graphic
 comparison, like this beak might be sharper or smaller than this one,
-all those comparisons help"* (P09, Bird,
-[Unexpected).
+all those comparisons help"* 
 
 Such advantage also supports **counterfactual reasoning** by checking
 alternative feature values on the adjacent branches.
 
-*"([Decision tree) can see how to improve. It
-has a comparison with different outputs."* (P29, Health,
-[Trust)
+> *"(Decision tree) can see how to improve. It
+has a comparison with different outputs."* 
 
-*"Where does my house stands, if I'd be here, then I maybe try to change
+> *"Where does my house stands, if I'd be here, then I maybe try to change
 some of my features, to see how do these features affect my house price,
-or other houses compared to my own house."* (P30, House)
+or other houses compared to my own house."* 
 
 ### **Cons**
 
 Several participants brought up its **weakness in communication and
 interpretation**.
 
-*"([Decision tree) is not natural language, it
-is more difficult to explain to my family."* (P01, House,
-[Communication)
+> *"(Decision tree) is not natural language, it
+is more difficult to explain to my family."* 
 
-*"This is more like a logical thing for me to see. But I wouldn't use
+> *"This is more like a logical thing for me to see. But I wouldn't use
 this as an explanation to family, because that's just weird. I don't
-want to rack their brains too much."* (P20, House,
-[Communication)
+want to rack their brains too much."* 
 
-Indeed, in the study even with a two-feature two-layer [decision
+Indeed, in the study even with a two-feature two-layer decision
 tree, a number of participants commented:
 
-*"It's confusing."* (P05, Bird, [Learning)
+>*"It's confusing."* 
 
-*"It got too much information."* (P16, Bird,
-[Unexpected)
+> *"It got too much information."* 
 
-*"I don't really understand this one. I think it's a little bit
-complicated."* (P08, Bird, [Learning)
+> *"I don't really understand this one. I think it's a little bit
+complicated."* 
 
 Since it is less interpretable than other forms, some participants
 suggested to show it on-demand.
 
-*"I don't think these two ([decision tree,
+> *"I don't think these two ([decision tree,
 [decision flow chart) are necessary to show in
 the first UI. Maybe these two can be hidden in an icon that says
 'process'. Because it ([decision tree) is more
-like a program in process.''* (P04, Bird, [Trust)
+like a program in process.''* 
 
 Besides the tree structure, we used another flow chart visual
-representation ([decision flow chart) in the
+representation (decision flow chart) in the
 study. In tasks that the inputs were images (Bird and Car task), quite a
 few participants found neither the tree nor the flow chart structure
 helpful, and they only focused on the saliency features or objects the
 flow chart shows.
 
-*"I don't think it (the flow chart structure) matters, just the head and
+> *"I don't think it (the flow chart structure) matters, just the head and
 the belly (the highlighted region shown in the flow chart) matter."*
-(P14, Bird)
+
 
 ### **Design Implications**
 
-Similar to the suggestions in [rule, to reduce
+Similar to the suggestions in rule, to reduce
 its complexity, one participant suggested **trimming the tree** and just
 show the main branches, hiding the deeper branch details and only
 showing them on-demand.
 
-*"You could use this one (the two-feature [decision
+> *"You could use this one (the two-feature decision
 tree) as a beginning, based on this, and you
 click (one branch) to another in-depth version of the price calculation.
 Because this (price prediction) range is still very far wide, and the
 features given is not enough, so if you want to (check details) maybe
 click and (it will) add more features to it (that branch), then get a
-narrow range (of prediction)."* (P28, House)
+narrow range (of prediction)."* 
 
 Although rule-based explanations are *global* explanations, many
 participants tended to seek the branch pathway where their own input
@@ -528,36 +520,14 @@ containing interested instances, or **highlight branches for their
 interested instances**. They did so for the needs to verify AI's
 decisions, and for comparison with other counterfactual instances.
 
-*"I know there're factors that could be other houses that lead to
+> *"I know there're factors that could be other houses that lead to
 different prices, but I still see it as, 'okay, I plug in my own numbers
-here and what's my price?' So it's still specific to me.'* (P20, House,
-[Trust) -- Displays local as well as global
-explanations
+here and what's my price?' So it's still specific to me.'*  -- Displays local as well as global explanations
 
-*"The only thing we need is to indicate my own position on this
+> *"The only thing we need is to indicate my own position on this
 ([decision tree) branch. \....Then I can chase
-the features of my house."* (P30, House,
-[Unexpected) -- Suggests to highlight the pathway
+the features of my house."*  -- Suggests to highlight the pathway
 for user's interested instance
-
-![ **Visualizing the similarities of the explanatory forms**. The
-explanatory forms that are close to each other indicate they are more
-likely to be selected together to construct an explanation. The total
-number of times an explanatory type was selected is indicated as the
-number below its name, also proportional to its dot size. The dot color
-indicates one of the four categories in the framework the explanatory
-type belongs to: [feature]{style="color: lightorange"},
-[example]{style="color: example"}, [rule]{style="color: rule"}, and
-[supplementary information. K-means clustering
-analysis on the 2D positional data yielded four clusters: **Cluster 1**:
-output, performance, dataset; **Cluster 2**: feature attribute, decision
-tree, rule, decision flow chart; **Cluster 3**: typical example, similar
-example, counterfactual example, input; **Cluster 4**: feature shape,
-feature interaction. ](figures/sim_2021.pdf){width="70%"}
-
-\Description{}
-[fig:sim]{#fig:sim label="fig:sim"}
-
 
 
 ---
@@ -574,30 +544,21 @@ Input is end-users' input data for AI's prediction. It is local explanation.
 
 ![Input](prototyping/Input.png)
 
-Input serves as necessary background information, and participants regarded
-[input as a *"profile"* (P24) that *"stating the
-facts"* (P20). It allows participants to **understand what information
+Input serves as necessary background information, and participants regarded input as a *"profile"* that *"stating the
+facts"*. It allows participants to **understand what information
 AI's decision is based on**, and can help "debug'' to see *"if AI is
-missing the most important feature"* in [input
-(P22, Health, [Bias), and *"whether or not the
-[input is enough for it (AI) to make that
-decision"* (P16, Health, [Trust).
+missing the most important feature"* in input, and *"whether or not the
+[input is enough for it (AI) to make that decision"* .
 
-When checking [input, participants tended to
-intuitively *"look for certain features"* (P14) to judge by themselves.
+When checking input, participants tended to
+intuitively *"look for certain features"*  to judge by themselves.
 And in the card sorting, some participants used
-[input as an anchor, put it side-by-side with
-example-bases explanatory forms ([similar,
-[typical, and [counterfactual
-example) for comparison. Quantitative results
-led to the same findings, as [input was
-clustered together with other example-based explanatory forms
-(Figure [fig:sim](#fig:sim){reference-type="ref"
-reference="fig:sim"}, Supplementary Material S2 Figure ??).
+input as an anchor, put it side-by-side with
+example-bases explanatory forms (similar,
+typical, and counterfactual
+example) for comparison. 
 
 ## <a name="output"></a> 4.2 Output
-
-
 
 Output is AI's prediction on the input. It is local explanation.
 
@@ -607,68 +568,57 @@ Sometimes the output prediction is accompanied by **decision certainty** level. 
 ![Input](prototyping/Input.png)
 
 
-In our study, the [output card contained
+In our study, the output card contained
 prediction information of a point prediction, a prediction range, and
 their corresponding uncertainty level (for regression tasks); Or top
-three predictions and their likelihood (for classification tasks)
-(Fig [fig:teaser](#fig:teaser){reference-type="ref"
-reference="fig:teaser"}). For the output information presentation, some
+three predictions and their likelihood (for classification tasks). For the output information presentation, some
 participants preferred to check the point prediction at the beginning,
 and check the detailed prediction range and uncertainty level on-demand
 or leave them at the end, since they *"need a longer time to understand
-what these numbers mean"* (P02).
+what these numbers mean"* .
 
 Participants had divergent preferences and understandings on the
 prediction presentation form. Compared to a point prediction (e.g.:
 house price prediction is 650k), some preferred to see a **prediction
 range** in regression tasks (e.g.: house price is 638-662k), or top
 predictions list in classification tasks, because such prediction range
-*"give choices"* (P05, Bird classification task,
-[Differentiation), *"acknowledges a possibility"*
-(P18, Bird, [Unexpected), rank the decision
-priorities (P03, Car classification task,
-[Safety), help them *"(the range) to see how
-different between my and AI prediction"* (P01, House regression task,
-[Unexpected), and provide rooms for adjustment and
-negotiation:
+*"give choices"*, *"acknowledges a possibility"*, rank the decision
+priorities, help them *"to see how
+different between my and AI prediction"*, and provide rooms for adjustment and negotiation:
 
-*"If I want to sell it higher, and I'll put 662k (the upper bound). Or
+> *"If I want to sell it higher, and I'll put 662k (the upper bound). Or
 if I wanted to sell it fast, then I'll put 638k (the lower bound).
 There's always a range, it's not necessarily just one price. And people
-will always bargain too."* (P20, House,
-[Communication)
+will always bargain too."* 
 
 And sometimes they *"don't even need to know the (prediction) number
 exactly. This (range) tells me that (my diabetes risk) it's high. I have
-to do something. So that's what I want to know"* (P17, Health regression
-task, [Trust), and the range gives a higher
-certainty than a single point prediction which enhanced participants'
+to do something. So that's what I want to know"*, and the range gives a higher certainty than a single point prediction which enhanced participants'
 trust.
 
 In contrast, some other participants were more acceptable to a narrower
 range or a **point prediction**, because they saw a wider range of
 prediction had its drawbacks: *"(the prediction range) shows too much
-fluctuation"* (P07, House, [Trust); And seeing the
+fluctuation"*; And seeing the
 full predictions list (some with lower prediction likelihoods) may make
 them confused and discredit AI's decisions. Thus a narrower range may
 give them more confidence about AI's prediction.
 
-*"Seeing that the range is pretty small makes me a lot more confident
-that they've got enough data to actually be drawing conclusions."* (P16,
-Health, regression task, [Trust)
+> *"Seeing that the range is pretty small makes me a lot more confident
+that they've got enough data to actually be drawing conclusions."* 
 
 For the prediction likelihood/uncertainty/confidence[^1], some
 participants **had a hard time understanding the meaning of
 uncertainty** and required researchers' explanations. A high certainty
-*"reassure AI's performance"* (P22), *"help a lot of persuading yourself
-into believing in AI"* (P10), which is consistent with the recent
+*"reassure AI's performance"*, *"help a lot of persuading yourself
+into believing in AI"*, which is consistent with the recent
 quantitative finding on certainty level and trust
-calibration [@Zhang2020]. Especially for the explanation need where AI's
-prediction is [unexpected, participants may
+calibration [^Zhang2020]. Especially for the explanation need where AI's
+prediction is [unexpected](need.md#unexpected), participants may
 abandon their own judgment due to AI's high certainty.
 
-*"If it had a high certainty, then I would want to know why my
-estimation is wrong."* (P10, House, [Unexpected)
+> *"If it had a high certainty, then I would want to know why my
+estimation is wrong."* 
 
 
 ## <a name="perf"></a> 4.3 Performance
@@ -680,51 +630,43 @@ Performance metrics (such as accuracy, confusion matrix, ROC curve, mean squared
 ![Performance](prototyping/Performance.png)
 
 
-After checking the [performance information,
+After checking the performance information,
 most participants realized the probabilistic nature of AI decisions:
-*"AI is not perfect"* (P20), *"they (AI) make errors sometimes"* (P05).
+*"AI is not perfect"*, *"they (AI) make errors sometimes"*.
 If the performance is within their acceptable range, participants would
 accept the "imperfect AI'', and it helped them to **set a proper
 expectation for AI's performance**.
 
-*"I get it's downside. [Performance warns me to,
-'Hey, you know, it's not really accurate. There's some room for error.'
-"* (P24)
+> *"I get it's downside. Performance warns me to, 'Hey, you know, it's not really accurate. There's some room for error.' "*
 
 And sometimes participants may calibrate their trust according to the
 error rate (in classification tasks) or error margin (in regression
 tasks).
 
-*"If there is a really big margin (of error), then it would probably
-demean the trust"* (P23).
+> *"If there is a really big margin (of error), then it would probably
+demean the trust."*
 
 Almost all participants understood the meaning of accuracy (error rate)
 in classification tasks, whereas many participants had a difficult time
 understanding the margin of error in regression tasks.
 
-*"[Performance is really in detail. I mean not
-everyone is familiar with statistics, like mean error"* (P30, House,
-regression task).
+*"Performance is really in detail. I mean not
+everyone is familiar with statistics, like mean error."* 
 
-Unlike the uncertainty level in [output
-(Section [1.10](#output){reference-type="ref" reference="output"}) which
+Unlike the uncertainty level in [output](#output) which
 is case-specific decision quality information, a few participants
-noticed [performance is model-wide information,
+noticed performance is model-wide information,
 and just provides *"general information showing the trust level of the
-system"* (P04) is *"too general, I would want to know specifically why
-(the speed) it's going down in this particular case of driving"* (P05,
-Car, [Unexpected). Thus they suggested there was
-no need to show it every time, *"you should know before you use AI"*
-(P11).
+system"* is *"too general, I would want to know specifically why
+(the speed) it's going down in this particular case of driving"*. Thus they suggested there was
+no need to show it every time, *"you should know before you use AI"*.
 
 However, in some particular explanation needs such as to [detect
-bias (Section [2.3](#bias){reference-type="ref"
-reference="bias"}), participants may require to check the fine-grained
+bias](need.me#bias), participants may require to check the fine-grained
 performance analysis on interested outcome.
 
-*"It (fine-grained [performance on road/weather
+> *"It (fine-grained [performance on road/weather
 conditions) explains how often I should be confident in rainy days."*
-(P19, Car, [Safety)
 
 ## <a name="data"></a> 4.4 Dataset
 
@@ -733,39 +675,38 @@ Dataset information includes the metadata on the dataset where the model is trai
 ![Dataset](prototyping/Dataset.png)
 
 
-In our study, the [dataset card contains
+In our study, the dataset card contains
 training dataset distribution of the prediction outcomes. Even after
 researchers' explanation, some participants did not well understand or
 **misunderstood** the information on this card (for example, some
 misinterpret the distribution graph as [feature
-shape), indicating it requires a higher
+shape](#fs), indicating it requires a higher
 AI/math/visualization literacy. For those who comprehended the
-[dataset information, some participants tended
+dataset information, some participants tended
 to link the dataset size with model accuracy and trust.
 
-*"The higher the (training data distribution) curve goes, then I would
-be more confident that they have a big pool of data to pull from."*(P31,
-Health, [Unexpected)
+> *"The higher the (training data distribution) curve goes, then I would
+be more confident that they have a big pool of data to pull from."*
 
 Some participants intuitively wanted to check their own data point
 within the training data distribution, and use it as a dashboard to
 **navigate, identify, and filter interested instances** such as
-([similar, [typical, and
-[counterfactual example), to compare what are
+(similar, typical, and
+counterfactual example), to compare what are
 the same and different features between their input and the interested
 instances.
 
-*"I want to see which region I fall in the population, and compare with
+> *"I want to see which region I fall in the population, and compare with
 people around to see why my (diabetes) risk is only 10% with a family
-history."* (P01, Health, [Unexpected)
+history."* 
 
 Nevertheless, in practice there may be some restrictions on reviewing
-the detailed [dataset information due to data
-proprietary and privacy, as brought out by P19:
+the detailed dataset information due to data
+proprietary and privacy, as brought out by one participant:
 
-*"I want to know the number of data and the details of it to verify. But
+>*"I want to know the number of data and the details of it to verify. But
 I don't know if that's going to be able to be viewed. That's probably
-secret, right?"* (P19, House, [Expected)
+secret, right?"*
 
 
 # Open-sourced XAI software packages
@@ -777,6 +718,11 @@ secret, right?"* (P19, House, [Expected)
 
 
 ---
+[^1]: Although the AI community has distinct methods to compute output
+    likelihood and uncertainty level, in our study we used likelihood,
+    confidence and uncertainty interchangeably to avoid participants'
+    confusion.
 [^Castro2019]: [Surrogate Decision Tree Visualization](http://ceur-ws.org/Vol-2327/IUI19WS-ExSS2019-15.pdf)
-[^@Ming2019]: [RuleMatrix:Visualizing and Understanding Classifiers with Rules](https://arxiv.org/abs/1807.06228)
-[^@Narayanan2018]: [How do Humans Understand Explanations from Machine Learning Systems? An Evaluation of the Human-Interpretability of Explanation](https://arxiv.org/abs/1802.00682)
+[^Ming2019]: [RuleMatrix:Visualizing and Understanding Classifiers with Rules](https://arxiv.org/abs/1807.06228)
+[^Narayanan2018]: [How do Humans Understand Explanations from Machine Learning Systems? An Evaluation of the Human-Interpretability of Explanation](https://arxiv.org/abs/1802.00682)
+[^Zhang2020]: [Effect of confidence and explanation on accuracy and trust calibration in AI-assisted decision making](https://arxiv.org/abs/2001.02114)

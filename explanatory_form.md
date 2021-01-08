@@ -24,7 +24,7 @@ We identify end-user-friendly explanatory forms from technical literature. By en
 11. [Performance](#perf)  
 12. [Dataset](#data)  
 
-**Comparison table**
+<a name="table"></a> **Comparison table**
 
 
 | **Explanatory type**             | **User-Friendly Level (3:most friendly)**  | **Local/global** | **Datatype**    | **Pros**                                                                                                  | **Cons**                                                                                 | **Applicable needs**                                                                     | **XAI algorithms**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |

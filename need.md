@@ -627,6 +627,7 @@ out what it's based on for the opposite reason maybe to discredit it."*
 
 ---
 **References**
+
 [^prior]: [Gregor1999](https://doi.org/10.2307/249487); [Doshi-Velez2017](http://arxiv.org/abs/1702.08608); [Nunes2017](https://doi.org/10.1007/s11257-017-9195-0); [Ribera2019](http://ceur-ws.org/Vol-2327/IUI19WS-ExSS2019-12.pdf)
 
 [^Turner]: [Calibrating Trust in AI-Assisted Decision Making. (2020)](https://www.ischool.berkeley.edu/sites/default/files/sproject_attachments/humanai_capstonereport-final.pdf)

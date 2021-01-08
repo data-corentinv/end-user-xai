@@ -24,19 +24,19 @@ We identify end-user-friendly explanatory forms from technical literature. By en
 11. [Performance](#perf)  
 12. [Dataset](#data)  
 
-<a name="table"></a> **Comparison table**
+<a name="table"></a> **Comparison table: You may jump to corresponding sections by clicking on the blue text**
 
 
-| **Explanatory form**             | **User-Friendly Level (3:most friendly)**  | **Local/global** | **Datatype**    | **Pros**                                                                                                  | **Cons**                                                                                 | **Applicable needs**                                                                     | **XAI algorithms**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Explanatory form**             | **User-Friendly Level (3:most friendly)**  | **Local/global** | **Datatype**     |**Visual representations** |**Pros**                                                                                                  | **Cons**                                                                                 |**UI/UX Design Implications**  |  **Applicable explanation needs**                                                     | **XAI algorithms**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-----------------------------------|----|--------------|-----------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[Feature Attribute](#fa)**      |&#9733; &#9733; &#9733; | Local/Global     | Tabular/Img/Txt | Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.                       | Illusion of causality, confirmation bias                                                 | To verify AI's decision                                                                  | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)                                                                                                                                                                                                                                                                  |
-| **[Feature Shape](#fs)**          |&#9733; &#9733; | Global           | Tabular         | Graphical representation, easy to understand the relationship between one feature and prediction          | Lacks feature interaction; Information overload if multiple feature shapes are presented | To control and improve the outcome; To reveal bias                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)                                                                                                                                                                                                                                                                                                                                                                                 |
-| **[Feature Interaction](#fi)**    |&#9733; | Global           | Tabular         | Show feature-feature interaction                                                                          | The diagram on multiple features is difficult to interpret                               | To control and improve the outcome                                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)                                                                                                                                                                                                                                                                                                                                                                |
-| **[Similar Example](#se)**        |&#9733; &#9733; &#9733; | Local            | Tabular/Img/Txt | Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples | It does not highlight features within examples to enable users’ side-by-side comparison  | To verify the decision                                                                   | [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)                                                                                                                                                                                                                                                                                                                                               |
-| **[Typical Example](#te)**        |&#9733; &#9733; | Local/Global     | Tabular/Img/Txt | Use prototypical instances to show learned representation; Reveal potential problems of the model         | Users may not appreciate the idea of typical cases                                       | To verify the decision; To reveal bias                                                   | [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), CNN prototype([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html)), [Influential instance](https://arxiv.org/abs/1703.04730)                                                    |
-| **[Counterfactual Example](#ce)** |&#9733; &#9733; | Local            | Tabular/Img/Txt | Helpful to identify the differences between the current outcome and another contrastive outcome           | Hard to understand, may cause confusion                                                  | To differentiate between similar instances; To control and improve the outcome           | [Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) |
-| **[Decision Rules/Sets](#rl)**    |&#9733; &#9733; | Global           | Tabular/Img/Txt | Present decision logic, *"like human explanation"*                                                        | Need to carefully balance between completeness and simplicity of explanation             | Facilitate users' learning, report generation, and communication with other stakeholders | [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)                                                                                                                                                                                                                                                                                                                                             |
-|**[Decision tree](#dt)** |&#9733; | Global | Tabular/Img/Txt |  Show decision process, explain the differences |  Too much information, complicated to understand |  Comparison; Counterfactual reasoning | [Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
+| **[Feature Attribute](#fa)**      |&#9733; &#9733; &#9733; | Local/Global     | Tabular/Img/Txt | Saliency map; Bar chart| Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.                       | Illusion of causality, confirmation bias    | Alarm users about causality illusion; Allow setting threshold on importance score, show details on-demand                                             | To verify AI's decision                                                                  | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)                                                                                                                                                                                                                                                                  |
+| **[Feature Shape](#fs)**          |&#9733; &#9733; | Global           | Tabular       | Line plot  | Graphical representation, easy to understand the relationship between one feature and prediction          | Lacks feature interaction; Information overload if multiple feature shapes are presented | Users can inspect the plot of their interested features; May indicate the position of local data points (usually users’ input data)| To control and improve the outcome; To reveal bias                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)                                                                                                                                                                                                                                                                                                                                                                                 |
+| **[Feature Interaction](#fi)**    |&#9733; | Global           | Tabular        | 2D or 3D heatmap | Show feature-feature interaction                                                                          | The diagram on multiple features is difficult to interpret                        | Users may select their interested feature pairs and check feature interactions; or XAI system can prioritize significant feature interactions       | To control and improve the outcome                                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)                                                                                                                                                                                                                                                                                                                                                                |
+| **[Similar Example](#se)**        |&#9733; &#9733; &#9733; | Local            | Tabular/Img/Txt| Data instances as examples | Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples | It does not highlight features within examples to enable users’ side-by-side comparison | Support side-by-side feature-based comparison among examples | To verify the decision                                                                   | [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)                                                                                                                                                                                                                                                                                                                                               |
+| **[Typical Example](#te)**        |&#9733; &#9733; | Local/Global     | Tabular/Img/Txt | Data instances as examples| Use prototypical instances to show learned representation; Reveal potential problems of the model         | Users may not appreciate the idea of typical cases                                       | To verify the decision; To reveal bias                                                   | [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), CNN prototype([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html)), [Influential instance](https://arxiv.org/abs/1703.04730)                                                    |
+| **[Counterfactual Example](#ce)** |&#9733; &#9733; | Local            | Tabular/Img/Txt | Two counterfactual data instances with their highlighted contrastive features, or a progressive transition between the two| Helpful to identify the differences between the current outcome and another contrastive outcome           | Hard to understand, may cause confusion                                               | User can define the predicted outcome to be contracted with, receive personalized counterfactual constraints; May only show controllable features   | To differentiate between similar instances; To control and improve the outcome           | [Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) |
+| **[Decision Rules/Sets](#rl)**    |&#9733; &#9733; | Global           | Tabular/Img/Txt | Present rules as text, table, or matrix| Present decision logic, *"like human explanation"*                                                        | Need to carefully balance between completeness and simplicity of explanation        | Trim rules and show on-demand; Highlight local clauses related to user's interested instances     | Facilitate users' learning, report generation, and communication with other stakeholders | [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)                                                                                                                                                                                                                                                                                                                                             |
+|**[Decision tree](#dt)** |&#9733; | Global | Tabular/Img/Txt | Tree diagram|  Show decision process, explain the differences |  Too much information, complicated to understand | Trim the tree and show on-demand; Support highlighting branches for user's interested instances|  Comparison; Counterfactual reasoning | [Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
 
 ---
 **About the user study**
@@ -73,7 +73,7 @@ The feature-based explanations consist of three explanatory forms:
 
 It indicates which features are important for the decision, and what are their attributions to the prediction. For example, it can be a list of key features and their importance scores to the house price prediction, or a color map overlaid on input image indicating the important parts/objects for the recognition. It assumes the prediction is explainable by linearly addable important features.
 
-### Visual representation
+### <a name="fa_v"></a> Visual representation
 
 ![Feature_attribute](prototyping/Feature_attribute.png)
 
@@ -85,7 +85,7 @@ To visualize multiple feature attributes for tabular or text data, a **bar chart
 
 [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)
 
-### Pros
+### <a name="fa_p"></a> Pros
 
 Users can **intuitively understood** feature attribute, and would likely accept it as an explanation.
 
@@ -97,11 +97,11 @@ By showing *"finer details"* and *"breakdown and weights of features" *"that AI 
 
 > *"tells me why", "gives me the behind the scenes", "tells me how AI read things and how it makes decisions", "have an understanding of how much weight AI is giving to each of the factors", "identify key aspect, ...support its reasoning"*.
 
-### **Applicable Explanation Needs**
+### <a name="fa_n"></a> Applicable Explanation Needs
 
 By checking feature importance ranking, participants would instantly *"compare with my own judgment, to see if that aligns with my feature attribute"*, especially when participants need to **verify AI's decision**.
 
-### **Cons**
+### <a name="fa_c"></a> Cons
 
 Although a causal relationship may not be confirmed, some participants tended to **assume feature attributeis causal**, or simplify the relationship among features by assuming they are **independent from each other**. This was usually occurred when they were seeking explanation to improve the predicted outcome. And participants were likely to be informed by the feature importance score to prioritize the most important features to take actions upon.
 
@@ -111,7 +111,7 @@ Although a causal relationship may not be confirmed, some participants tended to
 
 > *"If my blood sugar puts me at a super high risk here, but my caloric intake doesn't actually put me at that higher risk, it's like a lower risk, then I would rather just focus on blood sugar. "* -- Ignores the complex interaction between blood sugar and caloric intake.
 
-### **Design Implications**
+### <a name="fa_d"></a> Design Implications
 
 To avoid the above causal illusion, UI/UX design may need to **alarm users** either implicitly or explicitly that changing the important features may not necessarily lead to the outcome change in the real world, due to correlation does not necessarily imply causality.
 
@@ -124,7 +124,7 @@ For designing UI/UX of its prototyping card, designers may consider **varying di
 
 It shows the relationship between one particular feature and the outcome, such as the house size to the predicted house price. Usually, it is presented as a line plot (for continuous feature) or a bar plot (for categorical feature), depicting whether the relationship between the outcome and a feature is monotonic, linear, or more complex.
 
-### Visual representation
+### <a name="fs_v"></a> Visual representation
 
 ![Feature_shape](prototyping/Feature_shape.png)
 
@@ -135,13 +135,13 @@ It shows the relationship between one particular feature and the outcome, such a
 [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)
 
 
-### **Pros**
+### <a name="fs_p"></a>Pros
 
 Participants **liked its graphical representation** of showing the relationship between one feature and prediction.
 
 >*"It (feature shape on exercise and diabetes risk) feels so easy to latch onto like it's something that you can impact and something that's very tangible."* 
 
-### **Applicable Explanation Needs**
+### <a name="fs_n"></a> Applicable Explanation Needs
 
 The slope of the curve in feature shape line chart allows users to easily check how changing one feature would lead to the change of the outcome, thus many participants intuitively used feature shape for **counterfactual reasoning**, especially to improve the predicted outcome.
 
@@ -151,7 +151,7 @@ By showing the relationship between the protected feature and outcomes, it also 
 
 >*"If these features are related to diabetes, then it (AI) should present some (feature shape) cards to tell me if the gender, age and ethnicity (will affect diabetes prediction), so this image (feature shape) would be really helpful."*
 
-### **Cons**
+### <a name="fs_c"></a> Cons
 
 One drawback of feature shape pointed out by a few participants is that it does **not considerate feature interactions**.
 
@@ -161,7 +161,7 @@ Another drawback is that since one feature shape graph can only present one feat
 
 > *"make your page so **overloaded**, so people just get tired. You want to make it as clear as possible. So if (there is) some unnecessary information people just intimidated."* 
 
-### **Design Implications**
+### <a name="fs_d"></a> Design Implications
 
 One suggestion for the above weaknesses is that feature shape can be accompanied by other explanatory forms and **show on-demand**. Users can select their interested features from a feature list or other explanatory forms such as feature attribute, counterfactual example or rule, and choose to view feature shape diagrams of the selected features, as participants suggested:
 
@@ -180,7 +180,7 @@ And one participant suggested feature shape could have the assumption that for a
 
 When features interact with each other, their total effect on the outcome may not be a linear sum of each individual effect. Ficonsiders such interaction and shows the total effect of two or three features to the outcome. It can be regarded as an extension of fsby taking two or more features into account.
 
-### Visual representation
+### <a name="fi_v"></a> Visual representation
 
 ![Feature_interaction](prototyping/Feature_interaction.png)
 
@@ -190,17 +190,17 @@ When features interact with each other, their total effect on the outcome may no
 
 [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)    
 
-### **Applicable Explanation Needs**
+### <a name="fi_n"></a> Applicable Explanation Needs
 
 Since feature interaction just adds one more feature to the (feature-outcome) diagram to show feature-feature interactions, it can be regarded as an expanded version of feature shape, and many of the above findings on feature shape apply to feature interaction as well. Similar to feature shape, feature interaction also supports **counterfactual reasoning** by including two or more features instead of one in feature shape.
 
 > *"(feature interaction on age-body weight interaction) If you put yourself in a hypothetical guessing, you're in this age and this is your body weight, and you can already tell the chances (of diabetes) are high."* 
 
-### **Cons**
+### <a name="fi_c"></a> Cons
 
 *"The graph is **less accessible to understand**"*. In our study, only a few participants could correctly interpret the 2D heatmap of two feature interactions.
 
-### **Design Implications**
+### <a name="fi_n"></a> Design Implications
 
 Similar to feature shape, participants would like to **choose their interested feature pairs** to check their interactions on feature interaction diagram. Since the combination of features is large, the XAI system may be able to **suggest interesting feature interactions and prioritize** the feature pairs which have significant interactions.
 
@@ -208,7 +208,7 @@ Similar to feature shape, participants would like to **choose their interested f
 
 ---
 
-# <a name="example"></a>2. Example-based explanation
+# <a name="example"></a> 2. Example-based explanation
 
 Human uses examples to learn and explain. Examples carry contextual information and are intuitive for end-users to interpret. Three different types of examples are included:
 
@@ -221,7 +221,7 @@ Similar examples are instances that are similar to the input data regarding thei
 ### Algorithms for implementation
 [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)  
 
-### **Pros**
+### <a name="se_p"></a>Pros
 
 Participants **intuitively understood** the concept of similar example. Similar example uses analogical reasoning to facilitate to the sense-making process.
 
@@ -229,7 +229,7 @@ Participants **intuitively understood** the concept of similar example. Similar 
 
 > *"(similar and typical example) It's similar to how humans make decisions, like we compare similar images to the original (input) one."* 
 
-### **Applicable Explanation Needs**
+### <a name="se_n"></a> **Applicable Explanation Needs**
 
 Unlike other explanatory forms that reveal AI's decision-making process (such as rule-based explanations) , *"even though these (similar and typical example) aren't much specific about how it's actually doing the (decision) process"* , participants' minds automatically made up such a process by themselves by **comparing instances**. Such comparison mainly allow users to **verify AI's decisions** and to calibrate their trust. The common explanation needs in which similar example were selected are:
 
@@ -249,7 +249,7 @@ Unlike other explanatory forms that reveal AI's decision-making process (such as
 
 > *"If my prediction appears in similar example, it allows me to judge whether AI is completely unreliable or just need some improvement."* 
 
-### **Cons**
+### <a name="se_c"></a> **Cons**
 
 Showing examples for comparison may not be applicable when input data is incomprehensible or **difficult to read and compare**.
 
@@ -261,7 +261,7 @@ In addition, participants easily got confused when instances in similar example 
 
 > *"This one (similar example) has too many choices (predictions), it's too confusing."*
 
-### **Design Implications**
+### <a name="se_d"></a> **Design Implications**
 
 As mentioned above, participants had to compare the features in similar example by themselves. It's important for the XAI system to support such **side-by-side feature-based comparison** among instances such as input, similar, typical, or counterfactual example, especially when the input data format is difficult to read through.
 
@@ -276,7 +276,7 @@ As mentioned above, participants had to compare the features in similar example 
 
 A typical or prototypical example is a representative instance for a certain prediction. For example, a typical example of the diabetes prediction could be a patient who exhibits the typical features (abnormal hemoglobin A1C level) used by clinicians to diagnose diabetes.
 
-### Visual representation 
+### <a name="te_v"></a> Visual representation 
 
 ![Typical_example](prototyping/Typical_example.png)
 
@@ -286,16 +286,16 @@ For similar and typical examples, it is straightforward to show several the exam
 
  [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), [CNN prototype]([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html)), [Influential instance](https://arxiv.org/abs/1703.04730)
  
-### Pros
+### <a name="te_p"></a> Pros
 One drawback of [similar example](#se) is that it may make users confused about similar instances. Typical example may solve this problem since the typical examples for different predictions are more **distinct and separable** than nearest neighbors of similar example.
 
 > *"(typical example) You actually made a category of each one. I remember in cognitive psychology, there's a theory. I don't remember the name, but if you clearly separate each category, that helps people to differentiate the different categories, then remember. But for this one (similar example), you have to read every one (instance) of them."* 
 
-### Cons
+### <a name="te_c"></a> Cons
 
 Users may not capture the "typical" or "prototypical" idea at a glance. In our study, most participants regarded both similar example and typical example as similar examples. Only a few participants got the idea of typical example that *"you're getting the average"*.
 
-### **Applicable Explanation Needs**
+### <a name="te_n"></a> **Applicable Explanation Needs**
 
 Since typical example represents the typical case for the outcome, it may help to reveal class-specific characteristics or even potential problems in the AI model or data, for example to **reveal bias**.
 
@@ -303,7 +303,7 @@ Since typical example represents the typical case for the outcome, it may help t
 
 Unfortunately, most participants did not realize the meaning of typical example and did not make use of such "debugging'' property.
 
-### **Design Implications**
+### <a name="te_d"></a> **Design Implications**
 
 In addition to show typical example of different predictions (between-class variation), in some cases, it might be beneficial to show **different variations of typical example** for a particular prediction (within-class variation).
 
@@ -321,7 +321,7 @@ Its features are similar to the input, but has minimal feature changes so that i
 
 For example, an instance C that is predicted as healthy is a counterfactual example for the input I that is predicted to have diabetes, if C has all the same features as I, except its blood sugar level is lower than I. 
 
-### Visual representation 
+### <a name="ce_v"></a> Visual representation 
 
 ![Counterfactual_example](prototyping/Counterfactual_example.png)
 
@@ -332,7 +332,7 @@ Counterfactual examples can be shown as two instances with their **counterfactua
 [Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) 
 
 
-### **Pros and Applicable Explanation Needs**
+### <a name="ce_p"></a><a name="ce_n"></a>  **Pros and Applicable Explanation Needs**
 
 In our study, counterfactual example was shown as two instances of different predictions, with their feature differences highlighted while keeping other features the same. This format can serve for different explanation needs depending on the task context. In predictive tasks (House and Health), participants regarded counterfactual example as the most direct explanatory form to **suggest an improvement**.
 
@@ -342,7 +342,7 @@ While in recognition task (Bird), counterfactual example is suitable to **show t
 
 > *"Counterfactual example let me learn their relationship, highlight the difference between the two (birds). Help me remember the different features."*
 
-### **Cons**
+### <a name="ce_c"></a> **Cons**
 
 Some participants did not understand the meaning of counterfactual example, and could not capture the nuance between feature attribute and counterfactual example, since they both have features highlighted but for different reasons (feature attribute highlights important features for prediction, whereas counterfactual example highlights what features need to change for the alternative outcome to happen).
 
@@ -352,7 +352,7 @@ Counterfactual example may have the risk to make participants **confused about s
 
 Thus it may not be the beginning explanations and may only show up on-demand, for example, for the two explanation needs of improvement and differentiation mentioned above.
 
-### **Design Implications**
+### <a name="ce_d"></a> **Design Implications**
 
 The two **contrastive outcomes in counterfactual example can be user-defined or pre-generated** depending on the specific explanation needs. One outcome is usually from user's current instance such as input, and the alternative outcome can be: *"the next possible prediction"* (P18, Bird, Report), users' own prediction when there's a disagreement (Unexpected), the prospective outcome for improvement, and the easily confused outcome for differentiation.
 
@@ -376,7 +376,7 @@ Many participants noticed the different formats of rule-based explanations (rule
 
 The decision rules or decision sets are simple IF-THEN statement with condition and prediction. For example: IF blood sugar is high, AND body weight is over-weighted, THEN the estimated diabetes risk is over 80%.
 
-### Visual representation
+### <a name="rl_v"></a> Visual representation
 
 ![Decision_rule](prototyping/Rule.png)
 
@@ -387,13 +387,13 @@ Rules are usually represented using **text**. Other representing formats include
 
 [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)    
 
-### **Pros**
+### <a name="rl_p"></a> **Pros**
 
 Several participants regarded rule can
 *"**explain the logic** behind how the AI makes decisions"*.
 Particularly, the text description format is *"like human explanation"* that is *"simple enough and understandable"*.
 
-### **Applicable Explanation Needs**
+### <a name="rl_n"></a> **Applicable Explanation Needs**
 
 The above pros make it suitable for [verbal communication](need.md#communicate)) and
 [written **communications** ](need.md#report). Text format may also
@@ -415,7 +415,7 @@ However, when the input is image data, some participants also mentioned
 providing text explanations only was not enough. And many suggested *"ideally you'd want both written and
 pictures"* to complement each other.
 
-### **Cons**
+### <a name="rl_c"></a> **Cons**
 
 Rule is **very sensitive to the degree of
 complexity** in text descriptions, as an increase in rule length or
@@ -435,7 +435,7 @@ instructions human fed to the AI.
 to the AI, like written text instructions, these are already fed into
 the system."* (P09, Car, [Safety)
 
-### **Design Implications**
+### <a name="rl_d"></a> **Design Implications**
 
 To reduce the cognitive load of complex rule, a
 few participants suggested **trimming the rules** by only showing the
@@ -451,7 +451,7 @@ top of the *global* rule explanation.
 
 Rule is represented graphically as a tree structure, with the branch representing the decision pathway, and the leaf is the outcome.
 
-### Visual representation
+### <a name="dt_v"></a> Visual representation
 
 ![Decision_tree](prototyping/Decision_tree.png)
 
@@ -462,7 +462,7 @@ The most common representation is to use a node-link **tree diagram**. other vis
 
 [Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
 
-### **Pros**
+### <a name="dt_p"></a> **Pros**
 
 Similar to rule, participants regarded
 decision tree as *"the most logical one"* 
@@ -474,7 +474,7 @@ with AI, what it's going to do with the information."*
 > *"how the algorithm is working, what the machine is thinking about when
 it's coming up with the prediction."* 
 
-### **Applicable Explanation Needs**
+### <a name="dt_n"></a> **Applicable Explanation Needs**
 
 Participants mentioned an advantage of decision
 tree is to **[differentiate**, possibly due to its unique
@@ -500,7 +500,7 @@ has a comparison with different outputs."*
 some of my features, to see how do these features affect my house price,
 or other houses compared to my own house."* 
 
-### **Cons**
+### <a name="dt_c"></a> **Cons**
 
 Several participants brought up its **weakness in communication and
 interpretation**.
@@ -542,7 +542,7 @@ flow chart shows.
 the belly (the highlighted region shown in the flow chart) matter."*
 
 
-### **Design Implications**
+### <a name="dt_d"></a> **Design Implications**
 
 Similar to the suggestions in rule, to reduce
 its complexity, one participant suggested **trimming the tree** and just

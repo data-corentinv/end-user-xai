@@ -53,7 +53,9 @@ The 12 explanatory forms in EUCA framework are:
 9. [Input](explanatory_form.md/#input)  
 10. [Output](explanatory_form.md/#output)  
 11. [Performance](explanatory_form.md/#perf)  
-12. [Dataset](explanatory_form.md/#data)  
+12. [Dataset](explanatory_form.md/#data) 
+
+[Comparison table of the above forms](explanatory_form.md/#table)
 
 ![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.jpg)
 

@@ -93,7 +93,7 @@ Users can **intuitively understood** feature attribute, and would likely accept 
 
 > *"It's easy to read. ...And you have a bar (chart) here it's really clear information that people understand instantly."*
 
-By showing *"finer details"* and *"breakdown and weights of features" *"that AI took into account" , participants perceived feature attribute **can answer *"how"* and *"why"* questions**.
+By showing *"finer details"* and *"breakdown and weights of features"* *"that AI took into account"* , participants perceived feature attribute **can answer *"how"* and *"why"* questions**.
 
 > *"tells me why", "gives me the behind the scenes", "tells me how AI read things and how it makes decisions", "have an understanding of how much weight AI is giving to each of the factors", "identify key aspect, ...support its reasoning"*.
 

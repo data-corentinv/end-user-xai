@@ -152,7 +152,10 @@ You can create your own or even draw your explanatory cards on paper.  We provid
 
 # <a name="cite"></a> How to cite the EUCA framework?
 
-EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, and Ghassan Hamarneh. Here is our [research paper](EndUserXAI_manuscript_2021.pdf). 
+EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, and Ghassan Hamarneh. Here is our research paper:
+
+[**EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence**](EndUserXAI_manuscript_2021.pdf)
+
 
 ```
 @article{Jin_2021,

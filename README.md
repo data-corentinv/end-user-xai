@@ -55,79 +55,48 @@ The 12 explanatory forms in EUCA framework are:
 11. [Performance](explanatory_form.md/#perf)  
 12. [Dataset](explanatory_form.md/#data) 
 
-[Comparison table of the above forms](explanatory_form.md/#table)
 
 ![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.jpg)
 
+**Comparison table: You may jump to corresponding sections by clicking on the blue text**
+
+
+| **Explanatory form**             | **User-Friendly Level (3:most friendly)**  | **Local/global** | **Datatype**     |**Visual representations** |**Pros**                                                                                                  | **Cons**                                                                                 |**UI/UX Design Implications**  |  **Applicable explanation needs**                                                     | **XAI algorithms**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|-----------------------------------|----|--------------|-----------------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[Feature Attribute](#fa)**      |&#9733; &#9733; &#9733; | Local/Global     | Tabular/Img/Txt | [Saliency map; Bar chart](explanatory_form.md#fa_v)|[Simple and easy to understand; Can answer *how* and *why* AI reaches its decisions.](explanatory_form.md#fa_p)                      | [Illusion of causality, confirmation bias](explanatory_form.md#fa_c)     | [Alarm users about causality illusion; Allow setting threshold on importance score, show details on-demand](explanatory_form.md#fa_d)                                              | [To verify AI's decision](explanatory_form.md#fa_n)                                                                   | [LIME ](https://arxiv.org/abs/1606.05386), [SHAP](https://arxiv.org/abs/1705.07874), [CAM](https://arxiv.org/abs/1512.04150), [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [TCAV](https://arxiv.org/abs/1711.11279)                                                                                                                                                                                                                                                                  |
+| **[Feature Shape](#fs)**          |&#9733; &#9733; | Global           | Tabular       | [Line plot](explanatory_form.md#fs_v)  | [Graphical representation, easy to understand the relationship between one feature and prediction](explanatory_form.md#fs_p)          | [Lacks feature interaction; Information overload if multiple feature shapes are presented](explanatory_form.md#fs_c) | [Users can inspect the plot of their interested features; May indicate the position of local data points (usually users’ input data)](explanatory_form.md#fs_d)| [To control and improve the outcome; To reveal bias](explanatory_form.md#fs_n)                                       | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GAM](https://arxiv.org/abs/1801.08640)                                                                                                                                                                                                                                                                                                                                                                                 |
+| **[Feature Interaction](#fi)**    |&#9733; | Global           | Tabular        | [2D or 3D heatmap](explanatory_form.md#fi_v) | [Show feature-feature interaction](explanatory_form.md#fi_p)                                                                          | [The diagram on multiple features is difficult to interpret](explanatory_form.md#fi_c)                         | [Users may select their interested feature pairs and check feature interactions; or XAI system can prioritize significant feature interactions](explanatory_form.md#fi_d)         | [To control and improve the outcome](explanatory_form.md#fi_n)                                                         | [PDP](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf), [ALE](https://arxiv.org/abs/1612.08468), [GA2M](http://yinlou.github.io/papers/caruana-kdd15.pdf)                                                                                                                                                                                                                                                                                                                                                                |
+| **[Similar Example](#se)**        |&#9733; &#9733; &#9733; | Local            | Tabular/Img/Txt| [Data instances as examples](explanatory_form.md#se) | [Easy to comprehend, users intuitively verify AI’s decision using analogical reasoning on similar examples](explanatory_form.md#se_p) | [It does not highlight features within examples to enable users’ side-by-side comparison](explanatory_form.md#se_c) | [Support side-by-side feature-based comparison among examples](explanatory_form.md#se_d) | [To verify the decision](explanatory_form.md#se_n)                                                                   | [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm), [CBR ](https://web.media.mit.edu/~jorkin/generals/papers/Kolodner_case_based_reasoning.pdf)                                                                                                                                                                                                                                                                                                                                               |
+| **[Typical Example](#te)**        |&#9733; &#9733; | Local/Global     | Tabular/Img/Txt | [Data instances as examples](explanatory_form.md#te_v)| [Use prototypical instances to show learned representation; Reveal potential problems of the model](explanatory_form.md#te_p)         | [Users may not appreciate the idea of typical cases](explanatory_form.md#te_c)                           | [May show within-class variations, or edge cases](explanatory_form.md#te_d)             | [To verify the decision; To reveal bias ](explanatory_form.md#te_n)                                                  | [k-Mediods](https://en.wikipedia.org/wiki/K-medoids), [MMD-critic ](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability),  Generate prototype([Simonyan](https://arxiv.org/abs/1312.6034v2), [Mahendran2014](https://arxiv.org/abs/1412.0035)), CNN prototype([Li2017](https://arxiv.org/abs/1710.04806), [Chen2019](https://papers.nips.cc/paper/2019/hash/adf7ee2dcf142b0e11888e72b43fcb75-Abstract.html)), [Influential instance](https://arxiv.org/abs/1703.04730)                                                    |
+| **[Counterfactual Example](#ce)** |&#9733; &#9733; | Local            | Tabular/Img/Txt | [Two counterfactual data instances with their highlighted contrastive features, or a progressive transition between the two](explanatory_form.md#ce_v)| [Helpful to identify the differences between the current outcome and another contrastive outcome](explanatory_form.md#ce_p)           | [Hard to understand, may cause confusion](explanatory_form.md#ce_c)                                               | [User can define the predicted outcome to be contrasted with, receive personalized counterfactual constraints; May only show controllable features](explanatory_form.md#ce_d)   | [To differentiate between similar instances; To control and improve the outcome](explanatory_form.md#ce_n)           | [Inverse classification](http://www.doi.org/10.1007/978-3-319-91473-2_9), [MMD-critic](https://papers.nips.cc/paper/6300-examples-are-not-enough-learn-to-criticize-criticism-for-interpretability), [Progression](http://www.cs.sfu.ca/~hamarneh/ecopy/miccai_grail2017.pdf), [Counterfactual Visual Explanations](https://arxiv.org/abs/1904.07451v2), [Pertinent Negative](https://papers.nips.cc/paper/2018/file/c5ff2543b53f4cc0ad3819a36752467b-Paper.pdf) |
+| **[Decision Rules/Sets](#rl)**    |&#9733; &#9733; | Global           | Tabular/Img/Txt | [Present rules as text, table, or matrix](explanatory_form.md#rl_v)| [Present decision logic, *"like human explanation"*   ](explanatory_form.md#rl_p)                                                     | [Need to carefully balance between completeness and simplicity of explanation](explanatory_form.md#rl_c)        | [Trim rules and show on-demand; Highlight local clauses related to user's interested instances](explanatory_form.md#rl_d)     | [Facilitate users' learning, report generation, and communication with other stakeholders](explanatory_form.md#rl_n) | [Bayesian Rule Lists](https://arxiv.org/abs/1602.08610), [LORE](https://arxiv.org/abs/1805.10820), [Anchors](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982)                                                                                                                                                                                                                                                                                                                                             |
+|**[Decision tree](#dt)** |&#9733; | Global | Tabular/Img/Txt | [Tree diagram](explanatory_form.md#dt_v)|  [Show decision process, explain the differences](explanatory_form.md#dt_p) |  [Too much information, complicated to understand](explanatory_form.md#dt_c)  | [Trim the tree and show on-demand; Support highlighting branches for user's interested instances](explanatory_form.md#dt_d) |  [Comparison; Counterfactual reasoning](explanatory_form.md#dt_n)  | [Model distillation ](https://arxiv.org/pdf/1711.09784.pdf), [Disentangle CNN](https://arxiv.org/abs/1802.00121)
 
 ---
-# <a name="prototyping"></a> How to use EUCA for XAI prototyping?
+# [How to use EUCA for XAI prototyping?](prototype.md)
 
 ![The five main components of EUCA framework](fig/euca_workflow.jpg)
 
-## Step 1: Create prototyping cards from explanatory forms
-### 1.1 Think about your input and feature data type
+## [Step 1: Create prototyping cards from explanatory forms](prototype.md#card)
+1. Think about your input and feature data type
 
-The input data and feature format need to be human-understandable, so that end-users can interpret the explanations which are formed by features, examples, or rules.
+2. Get familiar with the [end-user-friendly explanatory forms](explanatory_form.md)  
 
-### 1.2 Get familiar with the [end-user-friendly explanatory forms](explanatory_form.md)  
-There are 12 end-user-friendly explanatory types in the EUCA framework. They are grouped into four categories: explaining using features, examples, rules, and supplementary information. The explanatory types are building blocks, and you can combine them to construct your end-user-oriented XAI prototype.
+3. Manually extracting several interpretable features
 
-### 1.3 Manually extracting several interpretable features
+4. Fill in the [prototyping card template](#template) with the extracted features
 
-Given the AI task and input/output data type, the designer starts by manually extracting several interpretable features. 
+5. (optional) Prepare multiple cards varying UI/UX
 
-For example, for tabular data, the features could be the column names that describing the input, such as house size, age, and location. 
+6. (optional) Consider applying the general human-AI interaction guidelines in your design
 
-For image data, the features could be saliency image part or object for recognition, such as cars, traffic signs, or pathological appearance of a disease on chest X-ray. 
+## [Step 2: Co-design and iterate low-fidelity prototype with end-users](prototype.md#codesign)
 
-As quick prototyping, the feature content may not necessarily reflect the true content generated by XAI algorithms. They served as content placeholders for the prototyping card design template.
+1. Understanding [end-users' needs for explainability](need.md)
 
-### 1.4 Fill in the prototyping card template with the extracted features
+2. Talk with end-users to co-design prototypes
 
-You can use the **[prototyping card design templates](#template)**, and fill in the template with the above extracted features. In this way, you created the prototyping card for each explanatory form. You can regard them as individual components of your future explainable AI prototype. 
-
-In the design template and example, we provide the basic visualization of the explanatory forms used in the user study. You can also create their own template from scratch by referring to the possible **Visual Representation** part for each [explanatory form](explanatory_form.md). 
-
-### 1.5 (optional) Prepare multiple cards varying UI/UX
-
-For a particular explanatory form, you may prepare multiple versions varying the visual representations (e.g.: graphics or text) and UI layout, alternating contents from brief to details, and providing different options, such as whether to use pre-defined or user-defined contrastive outcome on counterfactual example, whether to give users the option to set a threshold level for feature attribute.
-
-You may get more inspirations from the **Design Implication** part in the [end-user-friendly explanatory forms](explanatory_form.md). 
-
-Each explanatory form and its variations are presented on individual prototyping cards.
-
-### 1.6 (optional) Consider applying the general human-AI interaction guidelines in your design
-
-While designing UI/UX variations for the prototyping cards, designers may also consider and apply the general [human-AI interaction guidelines](https://www.microsoft.com/en-us/research/uploads/prod/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf), such as the following selected design guidelines that are more relevant to XAI system: 
-- remember recent interactions
-- support efficient invocation, dismissal and correction
-- remember recent interactions
-- learn from user behavior
-- encourage granular feedback
-
-## Step 2:  Co-design and iterate low-fidelity prototype with end-users
-The EUCA framework aim to facilitate your participatory design process, i.e., to involve end-users or other stakeholders in the software development lifecycle. 
-
-### 2.1 Understanding end-users' needs for explainability
-You can use the prepared explanatory form prototyping cards to discuss with your users about their needs for explainability in detail. Sometimes the motivation or trigger point to check explanations vary from calibrating trust with the AI system, to verifying the decisions from AI, to improving the predicted outcomes. And the demands for explainability may be distinct for different explanatory purposes. And users need may vary in different scenarios. Before your talk with the stakeholders, you may skim through the **[explanation need analysis](need.md)** to have a general idea.
-
-### 2.2 Talk with end-users
-
-In the meeting with end-users, to quickly create a low-fidelity paper prototype from the prototyping cards, your end-users can select, rank, combine, modify the prototyping cards, and even sketch new ones. In this process, you may ask users why they selected or did not select a card, and their rationals for making such a card combination, whether the combination will fulfill their requirements, and what is lacking in the current prototype. 
-
-Your users can easily manipulating the card positions to try out different layouts to examine different UI design possibilities (for example, on brewers, tablet or mobile phone).
-
-Users can also comment on and revise each variation of the same explanatory form. With the tangible prototyping card examples, designers can know in-details about users specific requirements on the UI/UX design.
-
-The prototyping cards may facilitate the discussion of UX design, for examples, users may choose to hide some cards and only show them on-demand, or to present different explanatory information in different contexts. 
-
-After the initial communication with users, you need to synthesize users comments and decide one or several prototype designs (such as using majority voting). Then based on the prototyping card ranking and combination, you can create low-fidelity prototypes, and continue to seek user and/or other stakeholders' feedback and iterate the prototype. 
-
-During the above process, you may refer to the user study findings to be informed about the properties of the explanation forms (pros, cons, applicable explanation needs, and design implications in [explanatory forms](explanatory_form.md)).
-
-## Step 3:  Implement a functional prototype
-We list the corresponding algorithms after each explanatory form, so that you or the technical partner can implement them or use the existing [open-sourced implementation](explanatory_form.md/#os) to deploy your XAI prototype. You may continue to iterate your XAI system based on the implemented working prototype. 
+## Step 3: Based on the [provided XAI techniques](explanator_form.md#table), [implement a functional prototype](prototype.md#implement)
 
 ---
 

@@ -124,14 +124,16 @@ You can create your own or even draw your explanatory cards on paper.  We provid
 EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, Philippe Pasquier, and Ghassan Hamarneh. Here is our research paper:
 
 [EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence](paper/EndUserXAI_manuscript.pdf)
-
+[arxiv](https://arxiv.org/abs/2102.02437)
 
 ```
-@article{Jin_2021,
+@article{jin2021euca,
    title={EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence},
-   author={Jin, Weina and Fan, Jianyu and Gromala, Diane and Pasquier, Philippe and Hamarneh, Ghassan},
-   year={2021},
-   month={Jan}
+      author={Weina Jin and Jianyu Fan and Diane Gromala and Philippe Pasquier and Ghassan Hamarneh},
+      year={2021},
+      eprint={2102.02437},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC}
 }
 ```
 

@@ -125,7 +125,7 @@ EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, Philippe Pasquier, and 
 
 Here is our research paper: [Arxiv](https://arxiv.org/abs/2102.02437)
 
-[EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence](paper/EndUserXAI_manuscript.pdf)
+[EUCA: the End-User-Centered Explainable AI Prototyping Framework](paper/EndUserXAI_manuscript.pdf)
 
 ```
 @article{jin2021euca,

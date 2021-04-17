@@ -110,10 +110,10 @@ We provide the following prototyping materials:
 * **Bird**: Bird species recognition. Image input
 
 We have the following versions:
-- [Sketch file](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_template.sketch)
+- [Editable Sketch file](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_template.sketch)
+- Editable PPT files: [PowerPoint](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_cards.pptx),  [Google slides](https://docs.google.com/presentation/d/1Md24K25opDU9lb5llop8i_vYs1aLvryW9iemF1y6gAU/edit?usp=sharing), and [PDF preview](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_cards.pdf)
 - PDF print version: [template](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template.pdf),   [blank card](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_BlankTemplate.pdf),   [all templates with individual card examples](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_all.pdf)    
-- [PowerPoint](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_cards.pptx) 
-- [Google slides](https://docs.google.com/presentation/d/1Md24K25opDU9lb5llop8i_vYs1aLvryW9iemF1y6gAU/edit?usp=sharing)
+
 
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
@@ -121,11 +121,11 @@ You can create your own or even draw your explanatory cards on paper.  We provid
 
 # <a name="cite"></a> How to cite the EUCA framework?
 
-EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, Philippe Pasquier, and Ghassan Hamarneh. Here is our research paper:
+EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, Philippe Pasquier, and Ghassan Hamarneh. 
+
+Here is our research paper: [Arxiv](https://arxiv.org/abs/2102.02437)
 
 [EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence](paper/EndUserXAI_manuscript.pdf)
-
-[arxiv](https://arxiv.org/abs/2102.02437)
 
 ```
 @article{jin2021euca,

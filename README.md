@@ -56,7 +56,7 @@ The 12 explanatory forms in EUCA framework are:
 12. [Dataset](explanatory_form.md/#data) 
 
 
-![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.jpg)
+![end-user-friendly explanatory forms include explaining using feature, example and rule](fig/et.png)
 
 **Comparison table: You may jump to corresponding sections by clicking on the blue text**
 
@@ -112,8 +112,8 @@ We provide the following prototyping materials:
 We have the following versions:
 - [Sketch file](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_template.sketch)
 - PDF print version: [template](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template.pdf),   [blank card](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_BlankTemplate.pdf),   [all templates with individual card examples](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_all.pdf)    
-- [PowerPoint (Coming soon)]() 
-- [Google slides (Coming soon)]()
+- [PowerPoint](https://github.com/weinajin/end-user-xai/blob/master/prototyping/EndUserXAI_Template_cards.pptx) 
+- [Google slides](https://docs.google.com/presentation/d/1Md24K25opDU9lb5llop8i_vYs1aLvryW9iemF1y6gAU/edit?usp=sharing)
 
 You can create your own or even draw your explanatory cards on paper.  We provide some examples on tabular and image input data for your reference.
 
@@ -124,6 +124,7 @@ You can create your own or even draw your explanatory cards on paper.  We provid
 EUCA is created by Weina Jin, Jianyu Fan, Diane Gromala, Philippe Pasquier, and Ghassan Hamarneh. Here is our research paper:
 
 [EUCA: A Practical Prototyping Framework towards End-User-Centered Explainable Artificial Intelligence](paper/EndUserXAI_manuscript.pdf)
+
 [arxiv](https://arxiv.org/abs/2102.02437)
 
 ```
